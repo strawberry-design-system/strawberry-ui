@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@strawberry-ui/*": ["packages/*/src"],
+      "@strawberry-ui/icons/*": ["packages/icons/src/*"],
+      "@strawberry-ui/react/*": ["packages/react/src/*"],
+      "@strawberry-ui/styles/*": ["packages/styles/src/*"],
+      "@strawberry-ui/tokens/*": ["packages/tokens/src/*"]
+    },
+    "strict": true
+  },
+  "include": ["packages/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

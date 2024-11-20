@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "lib": [
+      "ES2015",
+      "DOM"
+    ],
+    "target": "ES2015",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src/**/*",
+    "src/svg.d.ts"
+  ],
+  "references": [
+    { "path": "../styles" }
+  ]
+}

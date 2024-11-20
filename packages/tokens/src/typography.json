@@ -1,0 +1,23 @@
+{
+    "fontFamily": {
+        "base": "'Inter', sans-serif",
+        "heading": "'Roboto', sans-serif"
+    },
+    "fontSizes": {
+        "xsmall": "12px",
+        "small": "14px",
+        "medium": "16px",
+        "large": "18px",
+        "xlarge": "20px"
+    },
+    "fontWeight": {
+        "light": 300,
+        "regular": 400,
+        "bold": 700
+    },
+    "lineHeight": {
+        "small": "1.5",
+        "medium": "1.75",
+        "large": "2"
+    }
+}

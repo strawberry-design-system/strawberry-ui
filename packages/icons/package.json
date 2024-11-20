@@ -1,0 +1,14 @@
+{
+  "name": "@strawberry-ui/icons",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "echo 'No build step required for SVGs'"
+  },
+  "files": [
+    "src/svgs/**/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

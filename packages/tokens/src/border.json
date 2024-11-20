@@ -1,0 +1,20 @@
+{
+    "radius": {
+        "xsmall": "4px",
+        "small": "8px",
+        "medium": "12px",
+        "large": "16px",
+        "xlarge": "20px",
+        "full": "1000px"
+    },
+    "widths": {
+        "thin": "1px",
+        "medium": "2px",
+        "thick": "4px"
+    },
+    "style": {
+      "solid": "solid",
+      "dashed": "dashed",
+      "dotted": "dotted"
+    }
+}
