@@ -13,7 +13,7 @@ const Button = ({
     disabled = false,
     ...rest
 }: ButtonProps) => {
-    const isGreaterThanOne = icon && children || children && children.length > 1
+    const isGreaterThanOne = (icon && children) || (children && children.length > 1)
 
     const content = (
         <>
@@ -25,23 +25,31 @@ const Button = ({
 
     if (as === 'a') {
         return (
-            <a className={buttonStyle({
-                variant,
-                size,
-                fullWidth,
-                textButton: isGreaterThanOne
-            })} {...(rest as LinkProps)}>
+            <a
+                className={buttonStyle({
+                    variant,
+                    size,
+                    fullWidth,
+                    textButton: isGreaterThanOne
+                })}
+                {...(rest as LinkProps)}
+            >
                 {content}
             </a>
         )
     }
 
     return (
-        <button type={type} className={buttonStyle({
-            variant,
-            size,
-            fullWidth
-        })} {...(rest as ButtonPropsWithType)}>
+        <button
+            type={type}
+            className={buttonStyle({
+                variant,
+                size,
+                fullWidth
+            })}
+            disabled={disabled}
+            {...(rest as ButtonPropsWithType)}
+        >
             {content}
         </button>
     )
