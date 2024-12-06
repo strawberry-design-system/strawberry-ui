@@ -52,42 +52,53 @@ export const buttonStyle = css({
         size: {
             small: {
                 fontSize: '$xsmall',
-                padding: '$small',
-                textButton: {
-                    true: {
-                        paddingInline: '$large'
-                    }
-                }
+                padding: '$small'
             },
             medium: {
                 fontSize: '$small',
-                padding: '$medium',
-                textButton: {
-                    true: {
-                        paddingInline: '$xlarge'
-                    }
-                }
+                padding: '$medium'
             },
             large: {
                 fontSize: '$medium',
-                padding: '$large',
-                textButton: {
-                    true: {
-                        paddingInline: '$xxlarge'
-                    }
-                }
+                padding: '$large'
             }
         },
         fullWidth: {
             true: {
                 width: '$full'
             }
+        },
+        textButton: {
+            true: {}
         }
     },
     '&:disabled': {
         cursor: 'not-allowed',
         opacity: 0.5
     },
+    compoundVariants: [
+        {
+            textButton: 'true',
+            size: 'small',
+            css: {
+                paddingInline: '$large'
+            }
+        },
+        {
+            textButton: 'true',
+            size: 'medium',
+            css: {
+                paddingInline: '$xlarge'
+            }
+        },
+        {
+            textButton: 'true',
+            size: 'large',
+            css: {
+                paddingInline: '$xxlarge'
+            }
+        }
+    ],
     defaultVariants: {
         variant: 'primary',
         size: 'medium',
