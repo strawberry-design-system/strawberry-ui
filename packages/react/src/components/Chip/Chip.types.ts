@@ -2,7 +2,7 @@ export interface BaseProps {
     icon?: React.ReactNode
     deletable?: boolean
     onDelete?: () => void
-    children: string
+    children: React.ReactNode
 }
 
 export interface FilterProps extends BaseProps {
