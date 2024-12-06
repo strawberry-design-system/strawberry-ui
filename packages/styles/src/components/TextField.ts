@@ -33,7 +33,7 @@ export const textFieldStyle = css({
     gap: '$medium',
     fontSize: '$small',
     outlineColor: '$colorAccent',
-    paddingBlock: '$small',
+    paddingBlock: '$medium',
     paddingInline: '$xlarge',
     variants: {
         error: {
