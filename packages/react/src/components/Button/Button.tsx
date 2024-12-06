@@ -13,7 +13,7 @@ const Button = ({
     disabled = false,
     ...rest
 }: ButtonProps) => {
-    const isGreaterThanOne = (icon && children) || (children && children.length > 1)
+    const isGreaterThanOne = (icon && children) || (typeof children === 'string' && children.length > 1)
 
     const content = (
         <>
