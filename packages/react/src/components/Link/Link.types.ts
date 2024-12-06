@@ -3,5 +3,5 @@ export interface LinkProps {
     to?: string
     target?: '_self' | '_blank' | '_parent' | '_top'
     rel?: string
-    children: string
+    children: React.ReactNode
 }
