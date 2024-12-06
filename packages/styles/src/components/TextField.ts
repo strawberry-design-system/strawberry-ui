@@ -3,7 +3,7 @@ import { css } from '../stitches.config'
 export const containerStyle = css({
     display: 'flex',
     flexDirection: 'column',
-    gap: '$zsmall',
+    gap: '$xsmall',
     variants: {
         fullWidth: {
             true: {
