@@ -3,7 +3,6 @@ import { SearchBarProps } from './SearchBar.types'
 import { searchBarStyle, searchBarInputStyle, clearButtonStyle } from '@strawberry-ui/styles/components/SearchBar'
 import Icon from '../Icon'
 
-
 const SearchBar = ({ value = '', onChange, fullWidth }: SearchBarProps) => {
     const [search, setSearch] = useState(value)
 
@@ -20,12 +19,17 @@ const SearchBar = ({ value = '', onChange, fullWidth }: SearchBarProps) => {
     }
 
     return (
-        <div className={searchBarStyle({ focused: search != null, fullWidth: fullWidth })}>
-            <Icon name="search" />
-            <input className={searchBarInputStyle({ focused: search != null })} value={search} onChange={handleChange} placeholder='Pesquisar'/>
-            {search != null && (
+        <div className={searchBarStyle({ focused: search != '', fullWidth: fullWidth })}>
+            <Icon name='search' />
+            <input
+                className={searchBarInputStyle({ focused: search != '' })}
+                value={search}
+                onChange={handleChange}
+                placeholder='Pesquisar'
+            />
+            {search != '' && (
                 <button className={clearButtonStyle()} onClick={handleClear}>
-                    <Icon name="x" />
+                    <Icon name='x' />
                 </button>
             )}
         </div>
