@@ -4,7 +4,7 @@ export interface BaseProps {
     fullWidth?: boolean
     icon?: React.ReactNode
     iconPosition?: 'start' | 'end'
-    children?: string
+    children?: React.ReactNode
 }
 
 export interface ButtonPropsWithType extends BaseProps {
