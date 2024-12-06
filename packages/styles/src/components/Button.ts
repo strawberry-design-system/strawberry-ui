@@ -15,10 +15,10 @@ export const buttonStyle = css({
                 backgroundColor: '$colorAccent',
                 border: 'none',
                 color: '$colorNeutralPrimaryBackground',
-                '&:not(disabled):hover': {
+                '&:not(:disabled):hover': {
                     backgroundColor: '$colorAccentHover'
                 },
-                '&:hover': {
+                '&:disabled': {
                     backgroundColor: '$colorNeutralDisabledBackground',
                     color: '$colorNeutralDisabledText'
                 }
@@ -29,10 +29,10 @@ export const buttonStyle = css({
                 borderStyle: 'solid',
                 borderWidth: '$thin',
                 color: '$colorNeutralPrimaryText',
-                '&:not(disabled):hover': {
+                '&:not(:disabled):hover': {
                     backgroundColor: '$colorNeutralHover'
                 },
-                '&:hover': {
+                '&:disabled': {
                     borderColor: '$colorNeutralDisabledBackground',
                     color: '$colorNeutralDisabledText'
                 }
@@ -41,10 +41,10 @@ export const buttonStyle = css({
                 backgroundColor: 'transparent',
                 border: 'none',
                 color: '$colorNeutralPrimaryText',
-                '&:not(disabled):hover': {
+                '&:not(:disabled):hover': {
                     backgroundColor: '$colorNeutralHover'
                 },
-                '&:hover': {
+                '&:disabled': {
                     color: '$colorNeutralDisabledText'
                 }
             }
