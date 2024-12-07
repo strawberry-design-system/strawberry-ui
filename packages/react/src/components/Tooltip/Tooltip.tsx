@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import { TooltipProps } from './Tooltip.types'
 import { useId } from '../../../../react/src/hooks'
 import { containerStyle, tooltipStyle } from '../../../../styles/src/components/Tooltip'
