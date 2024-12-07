@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { TooltipProps } from './Tooltip.types'
-import { useId } from '../../../../react/src/hooks'
-import { containerStyle, tooltipStyle } from '../../../../styles/src/components/Tooltip'
+import { useId } from '@strawberry-ui/react/hooks'
+import { containerStyle, tooltipStyle } from '@strawberry-ui/styles/components/Tooltip'
 
 const Tooltip = ({ id: customId, title, position = 'bottom', onShow, onHide, children }: TooltipProps) => {
     const id = customId || useId('tooltip')
