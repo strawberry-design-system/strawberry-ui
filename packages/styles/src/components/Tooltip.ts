@@ -13,19 +13,17 @@ export const tooltipStyle = css({
     padding: '$small',
     pointerEvents: 'none',
     position: 'absolute',
-    transition: 'opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s',
+    transition: 'opacity 0.3s ease, visibility 0s linear 0.3s',
     whiteSpace: 'nowrap',
     zIndex: '10',
     variants: {
         visible: {
             true: {
                 opacity: 1,
-                transform: 'translateY(0)',
                 visibility: 'visible'
             },
             false: {
                 opacity: 0,
-                transform: 'translateY(10px)',
                 visibility: 'hidden'
             }
         },
