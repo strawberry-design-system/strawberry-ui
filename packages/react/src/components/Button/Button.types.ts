@@ -12,6 +12,7 @@ export interface ButtonPropsWithType extends BaseProps {
     type?: 'button' | 'submit' | 'reset'
     onClick?: React.MouseEventHandler<HTMLButtonElement>
     disabled?: boolean
+    isLoading?: boolean
 }
 
 export interface LinkProps extends BaseProps {
@@ -19,6 +20,7 @@ export interface LinkProps extends BaseProps {
     type?: never
     href?: string
     disabled?: never
+    isLoading?: never
 }
 
 export type ButtonProps = ButtonPropsWithType | LinkProps

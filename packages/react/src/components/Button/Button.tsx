@@ -1,5 +1,6 @@
 import { buttonStyle } from '@strawberry-ui/styles/components/Button'
 import { ButtonProps, ButtonPropsWithType, LinkProps } from './Button.types'
+import Spinner from '../Spinner'
 
 const Button = ({
     as = 'button',
@@ -11,6 +12,7 @@ const Button = ({
     children,
     type = 'button',
     disabled = false,
+    isLoading = false,
     ...rest
 }: ButtonProps) => {
     const isTextButton = children != null
@@ -22,7 +24,9 @@ const Button = ({
         textButton: isTextButton
     })
 
-    const content = (
+    const content = isLoading ? (
+        <Spinner />
+    ) : (
         <>
             {icon && iconPosition === 'start' && icon}
             {children}
@@ -39,7 +43,12 @@ const Button = ({
     }
 
     return (
-        <button type={type} className={buttonClasses} disabled={disabled} {...(rest as ButtonPropsWithType)}>
+        <button
+            type={type}
+            className={buttonClasses}
+            disabled={isLoading || disabled}
+            {...(rest as ButtonPropsWithType)}
+        >
             {content}
         </button>
     )
