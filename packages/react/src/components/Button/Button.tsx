@@ -15,6 +15,13 @@ const Button = ({
 }: ButtonProps) => {
     const isTextButton = children != null
 
+    const buttonClasses = buttonStyle({
+        variant,
+        size,
+        fullWidth,
+        textButton: isTextButton
+    })
+
     const content = (
         <>
             {icon && iconPosition === 'start' && icon}
@@ -25,32 +32,14 @@ const Button = ({
 
     if (as === 'a') {
         return (
-            <a
-                className={buttonStyle({
-                    variant,
-                    size,
-                    fullWidth,
-                    textButton: isTextButton
-                })}
-                {...(rest as LinkProps)}
-            >
+            <a className={buttonClasses} {...(rest as LinkProps)}>
                 {content}
             </a>
         )
     }
 
     return (
-        <button
-            type={type}
-            className={buttonStyle({
-                variant,
-                size,
-                fullWidth,
-                textButton: isTextButton
-            })}
-            disabled={disabled}
-            {...(rest as ButtonPropsWithType)}
-        >
+        <button type={type} className={buttonClasses} disabled={disabled} {...(rest as ButtonPropsWithType)}>
             {content}
         </button>
     )
