@@ -29,6 +29,7 @@ export const chipStyle = css({
     paddingBlock: '$xsmall',
     paddingInline: '$medium',
     textDecoration: 'none',
+    transition: 'background-color 0.3s',
     variants: {
         type: {
             filter: {
