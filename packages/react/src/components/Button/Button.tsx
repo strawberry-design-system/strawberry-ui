@@ -13,7 +13,7 @@ const Button = ({
     disabled = false,
     ...rest
 }: ButtonProps) => {
-    const isGreaterThanOne = (icon && children) || (typeof children === 'string' && children.length > 1)
+    const isTextButton = children != null
 
     const content = (
         <>
@@ -30,7 +30,7 @@ const Button = ({
                     variant,
                     size,
                     fullWidth,
-                    textButton: isGreaterThanOne
+                    textButton: isTextButton
                 })}
                 {...(rest as LinkProps)}
             >
@@ -45,7 +45,8 @@ const Button = ({
             className={buttonStyle({
                 variant,
                 size,
-                fullWidth
+                fullWidth,
+                textButton: isTextButton
             })}
             disabled={disabled}
             {...(rest as ButtonPropsWithType)}
