@@ -9,6 +9,7 @@ export const buttonStyle = css({
     gap: '$xsmall',
     justifyContent: 'center',
     textDecoration: 'none',
+    transition: 'background-color 0.3s',
     variants: {
         variant: {
             primary: {
