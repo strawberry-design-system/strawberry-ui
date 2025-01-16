@@ -5,7 +5,7 @@ export const buttonStyle = css({
     borderRadius: '$full',
     cursor: 'pointer',
     display: 'inline-flex',
-    fontWeight: 'bold',
+    fontWeight: '$bold',
     gap: '$xsmall',
     justifyContent: 'center',
     textDecoration: 'none',

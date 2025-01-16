@@ -2,7 +2,7 @@ import { css } from '../stitches.config'
 
 export const headingStyle = css({
     color: '$colorNeutralPrimaryText',
-    fontWeight: 'bold',
+    fontWeight: '$bold',
     variants: {
         size: {
             xsmall: {
