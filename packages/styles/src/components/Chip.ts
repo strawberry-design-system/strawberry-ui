@@ -34,13 +34,6 @@ export const chipStyle = css({
         type: {
             filter: {
                 cursor: 'pointer',
-                checked: {
-                    true: {
-                        backgroundColor: '$colorAccent',
-                        border: 'none',
-                        color: '$colorNeutralPrimaryBackground'
-                    }
-                },
                 '&:hover': {
                     backgroundColor: '$colorNeutralHover'
                 }
@@ -51,6 +44,23 @@ export const chipStyle = css({
                     backgroundColor: '$colorNeutralHover'
                 }
             }
+        },
+        checked: {
+            true: {}
         }
-    }
+    },
+    compoundVariants: [
+        {
+            checked: 'true',
+            type: 'filter',
+            css: {
+                backgroundColor: '$colorAccent',
+                border: 'none',
+                color: '$colorNeutralPrimaryBackground',
+                '&:hover': {
+                    backgroundColor: '$colorAccentHover'
+                }
+            }
+        }
+    ]
 })
