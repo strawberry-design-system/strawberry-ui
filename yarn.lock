@@ -7,25 +7,25 @@
   resolved "https://registry.npmjs.org/@stitches/core/-/core-1.2.8.tgz"
   integrity sha512-Gfkvwk9o9kE9r9XNBmJRfV8zONvXThnm1tcuojL04Uy5uRyqg93DC83lDebl0rocZCfKSjUv+fWYtMQmEDJldg==
 
-"@strawberry-ui/icons@file:C:\\Users\\LINX\\strawberry-ui-1\\packages\\icons":
+"@strawberry-ui/icons@1.0.0", "@strawberry-ui/icons@file:C:\\Users\\034687\\strawberry-ui\\packages\\icons":
   version "1.0.0"
   resolved "file:packages/icons"
 
-"@strawberry-ui/react@file:C:\\Users\\LINX\\strawberry-ui-1\\packages\\react":
+"@strawberry-ui/react@file:C:\\Users\\034687\\strawberry-ui\\packages\\react":
   version "1.0.0"
   resolved "file:packages/react"
   dependencies:
     react "^18.3.1"
     react-dom "^18.3.1"
 
-"@strawberry-ui/styles@file:C:\\Users\\LINX\\strawberry-ui-1\\packages\\styles":
+"@strawberry-ui/styles@1.0.0", "@strawberry-ui/styles@file:C:\\Users\\034687\\strawberry-ui\\packages\\styles":
   version "1.0.0"
   resolved "file:packages/styles"
   dependencies:
     "@stitches/core" "^1.2.8"
     "@strawberry-ui/tokens" "1.0.0"
 
-"@strawberry-ui/tokens@1.0.0", "@strawberry-ui/tokens@file:C:\\Users\\LINX\\strawberry-ui-1\\packages\\tokens":
+"@strawberry-ui/tokens@1.0.0", "@strawberry-ui/tokens@file:C:\\Users\\034687\\strawberry-ui\\packages\\tokens":
   version "1.0.0"
   resolved "file:packages/tokens"
 
