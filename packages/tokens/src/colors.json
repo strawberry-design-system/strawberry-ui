@@ -5,8 +5,8 @@
         "dark": "#b12927",
         "low": "#7a1a1a"
     },
-    "success": "#28a745",
-    "error": "#dc3545",
+    "positive": "#28a745",
+    "negative": "#dc3545",
     "warning": "#ffc107",
     "white": "#ffffff",
     "black": "#000000",

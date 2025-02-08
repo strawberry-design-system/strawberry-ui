@@ -12,8 +12,8 @@ export const { css, globalCss, keyframes, getCssText, theme, createTheme, config
         colors: {
             colorAccent: colors.brand.dark,
             colorAccentHover: colors.brand.low,
-            colorError: colors.error,
-            colorSuccess: colors.success,
+            colorNegative: colors.negative,
+            colorPositive: colors.positive,
             colorWarning: colors.warning,
             colorNeutralBackdrop: `${colors.black}30`,
             colorNeutralBorder: colors.gray[300],
