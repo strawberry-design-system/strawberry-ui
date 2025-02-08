@@ -48,6 +48,19 @@ export const buttonStyle = css({
                 '&:disabled': {
                     color: '$colorNeutralDisabledText'
                 }
+            },
+            negative: {
+                backgroundColor: 'transparent',
+                border: 'none',
+                color: '$colorNegative',
+                '&:not(:disabled):hover': {
+                    backgroundColor: '$colorNegative',
+                    border: 'none',
+                    color: '$colorNeutralPrimaryBackground'
+                },
+                '&:disabled': {
+                    color: '$colorNeutralDisabledText'
+                }
             }
         },
         size: {

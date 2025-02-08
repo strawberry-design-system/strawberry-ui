@@ -1,5 +1,5 @@
 export interface BaseProps {
-    variant?: 'primary' | 'secondary' | 'tertiary'
+    variant?: 'primary' | 'secondary' | 'tertiary' | 'negative'
     size?: 'small' | 'medium' | 'large'
     fullWidth?: boolean
     icon?: React.ReactNode
