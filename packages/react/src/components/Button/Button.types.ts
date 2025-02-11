@@ -19,6 +19,8 @@ export interface LinkProps extends BaseProps {
     as: 'a'
     type?: never
     href?: string
+    target?: '_blank' | '_self' | '_parent' | '_top' | string
+    rel?: string
     disabled?: never
     isLoading?: never
 }
