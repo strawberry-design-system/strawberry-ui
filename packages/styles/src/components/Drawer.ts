@@ -6,31 +6,31 @@ export const drawerContainerStyle = css({
     height: '$full',
     position: 'fixed',
     top: 0,
-    width: '$full'
+    width: '$full',
 })
 
 export const drawerBackdropStyle = css({
     backgroundColor: '$colorNeutralBackdrop',
     height: '$full',
-    width: '$full'
+    width: '$full',
 })
 
 export const drawerStyle = css({
     backgroundColor: '$colorNeutralPrimaryBackground',
     height: '$full',
-    maxWidth: '$xsmall',
+    maxWidth: '$large',
     position: 'absolute',
-    width: '$full'
+    width: '$full',
 })
 
 export const drawerListStyle = css({
     maxHeight: '$full',
     listStyle: 'none',
-    overflowY: 'auto'
+    overflowY: 'auto',
 })
 
 export const drawerItemStyle = css({
-    display: 'flex'
+    display: 'flex',
 })
 
 export const drawerLinkStyle = css({
@@ -46,14 +46,14 @@ export const drawerLinkStyle = css({
                 borderLeftStyle: 'solid',
                 borderLeftWidth: '$medium',
                 color: '$colorNeutralPrimaryText',
-                fontWeight: '$bold'
+                fontWeight: '$bold',
             },
             false: {
                 color: '$colorNeutralSecondaryText',
                 '&:hover': {
-                    backgroundColor: '$colorNeutralHover'
-                }
-            }
-        }
-    }
+                    backgroundColor: '$colorNeutralHover',
+                },
+            },
+        },
+    },
 })

@@ -6,7 +6,7 @@ export const modalContainerStyle = css({
     overflowY: 'auto',
     position: 'fixed',
     top: 0,
-    width: '$full'
+    width: '$full',
 })
 
 export const modalContentStyle = css({
@@ -19,7 +19,7 @@ export const modalContentStyle = css({
     padding: '$xxlarge',
     position: 'absolute',
     top: 0,
-    width: '$full'
+    width: '$full',
 })
 
 export const backdropStyle = css({
@@ -28,13 +28,13 @@ export const backdropStyle = css({
     left: 0,
     position: 'absolute',
     top: 0,
-    width: '$full'
+    width: '$full',
 })
 
 export const modalStyle = css({
     backgroundColor: '$colorNeutralPrimaryBackground',
     borderRadius: '$xlarge',
-    maxWidth: '$small',
+    maxWidth: '$xlarge',
     position: 'relative',
-    width: '$full'
+    width: '$full',
 })
