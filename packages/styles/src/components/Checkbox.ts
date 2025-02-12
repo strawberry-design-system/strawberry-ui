@@ -7,6 +7,15 @@ export const labelStyle = css({
     display: 'flex',
     fontSize: '$small',
     gap: '$xsmall',
+    variants: {
+        disabled: {
+            true: {
+                color: 'colorNeutralDisabledText',
+                cursor: 'not-allowed',
+                opacity: 0.5,
+            },
+        },
+    },
 })
 
 export const inputStyle = css({
@@ -45,8 +54,6 @@ export const checkboxStyle = css({
         disabled: {
             true: {
                 borderColor: '$colorNeutralDisabledBackground',
-                cursor: 'not-allowed',
-                opacity: 0.5,
             },
         },
     },
