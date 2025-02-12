@@ -21,11 +21,11 @@ const Button = ({
         variant,
         size,
         fullWidth,
-        textButton: isTextButton
+        textButton: isTextButton,
     })
 
     const content = isLoading ? (
-        <Spinner />
+        <Spinner color='inherit' />
     ) : (
         <>
             {icon && iconPosition === 'start' && icon}
