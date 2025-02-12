@@ -7,19 +7,19 @@ export const containerStyle = css({
     variants: {
         fullWidth: {
             true: {
-                width: '$full'
-            }
-        }
-    }
+                width: '$full',
+            },
+        },
+    },
 })
 
 export const labelStyle = css({
     color: '$colorNeutralPrimaryText',
-    fontSize: '$medium'
+    fontSize: '$medium',
 })
 
 export const requiredStyle = css({
-    color: '$colorError'
+    color: '$colorNegative',
 })
 
 export const textFieldStyle = css({
@@ -38,29 +38,29 @@ export const textFieldStyle = css({
     variants: {
         error: {
             true: {
-                borderColor: '$colorError'
-            }
+                borderColor: '$colorNegative',
+            },
         },
         fullWidth: {
             true: {
-                width: '$full'
-            }
-        }
+                width: '$full',
+            },
+        },
     },
     '&:disabled': {
         borderColor: '$colorNeutralDisabledBackground',
         color: '$colorNeutralDisabledText',
         cursor: 'not-allowed',
-        opacity: 0.5
-    }
+        opacity: 0.5,
+    },
 })
 
 export const helperTextStyle = css({
     color: '$colorNeutralSecondaryText',
-    fontSize: '$small'
+    fontSize: '$small',
 })
 
 export const errorMessageStyle = css({
-    color: '$colorError',
-    fontSize: '$small'
+    color: '$colorNegative',
+    fontSize: '$small',
 })
