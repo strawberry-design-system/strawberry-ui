@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { CheckboxProps } from './Checkbox.types'
-import { useId } from '../../../../react/src/hooks'
-import { labelStyle, inputStyle, checkboxStyle } from '../../../../styles/src/components/Checkbox'
+import { useId } from '../../hooks'
+import { labelStyle, inputStyle, checkboxStyle } from '@strawberry-ui/styles/components/Checkbox'
 
 const Checkbox = ({ id: customId, checked, onChange, label, disabled }: CheckboxProps) => {
     const id = customId || useId('checkbox')
@@ -30,7 +30,11 @@ const Checkbox = ({ id: customId, checked, onChange, label, disabled }: Checkbox
                 onChange={handleChange}
                 disabled={disabled}
             />
-            <span className={checkboxStyle({ checked: isCheckedProp, disabled })} aria-checked={isCheckedProp} />
+            <span
+                className={checkboxStyle({ checked: isCheckedProp, disabled })}
+                aria-checked={isCheckedProp}
+                aria-disabled={disabled && 'true'}
+            />
             {label}
         </label>
     )
