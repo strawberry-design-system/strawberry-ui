@@ -28,7 +28,7 @@ const Checkbox = ({ id: customId, checked, onChange, label, disabled }: Checkbox
                 type='checkbox'
                 checked={isCheckedProp}
                 onChange={handleChange}
-                disabled
+                disabled={disabled}
             />
             <span className={checkboxStyle({ checked: isCheckedProp, disabled })} aria-checked={isCheckedProp} />
             {label}
