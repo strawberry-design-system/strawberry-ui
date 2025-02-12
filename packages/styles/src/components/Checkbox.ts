@@ -18,9 +18,10 @@ export const checkboxStyle = css({
     borderStyle: 'solid',
     borderWidth: '$thin',
     display: 'flex',
-    height: '20px',
+    height: '$xxxsmall',
+    position: 'relative',
     transition: 'background-color 0.3s ease, border 0.3s ease',
-    width: '20px',
+    width: '$xxxsmall',
     variants: {
         checked: {
             true: {
@@ -31,7 +32,7 @@ export const checkboxStyle = css({
                     content: '✔',
                     fontSize: '$xsmall',
                     left: '50%',
-                    position: 'relative',
+                    position: 'absolute',
                     top: '50%',
                     transform: 'translate(-50%, -50%)',
                 },
