@@ -14,8 +14,6 @@ export const inputStyle = css({
 })
 
 export const checkboxStyle = css({
-    backgroundColor: 'transparent',
-    borderColor: '$colorNeutralBorder',
     borderRadius: '$small',
     borderStyle: 'solid',
     borderWidth: '$thin',
@@ -38,6 +36,26 @@ export const checkboxStyle = css({
                     transform: 'translate(-50%, -50%)',
                 },
             },
+            false: {
+                backgroundColor: 'transparent',
+                borderColor: '$colorNeutralBorder',
+            },
+        },
+        disabled: {
+            true: {
+                borderColor: '$colorNeutralDisabledBackground',
+                cursor: 'not-allowed',
+                opacity: 0.5,
+            },
         },
     },
+    compoundVariants: [
+        {
+            disabled: 'true',
+            checked: 'true',
+            css: {
+                backgroundColor: '$colorNeutralDisabledBackground',
+            },
+        },
+    ],
 })

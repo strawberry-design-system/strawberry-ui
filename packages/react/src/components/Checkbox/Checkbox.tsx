@@ -3,7 +3,7 @@ import { CheckboxProps } from './Checkbox.types'
 import { useId } from '../../../../react/src/hooks'
 import { labelStyle, inputStyle, checkboxStyle } from '../../../../styles/src/components/Checkbox'
 
-const Checkbox = ({ id: customId, checked, onChange, label }: CheckboxProps) => {
+const Checkbox = ({ id: customId, checked, onChange, label, disabled }: CheckboxProps) => {
     const id = customId || useId('checkbox')
 
     const [isChecked, setIsChecked] = useState(checked ?? false)
@@ -22,8 +22,15 @@ const Checkbox = ({ id: customId, checked, onChange, label }: CheckboxProps) => 
 
     return (
         <label className={labelStyle()}>
-            <input id={id} className={inputStyle()} type='checkbox' checked={isCheckedProp} onChange={handleChange} />
-            <span className={checkboxStyle({ checked: isCheckedProp })} aria-checked={isCheckedProp} />
+            <input
+                id={id}
+                className={inputStyle()}
+                type='checkbox'
+                checked={isCheckedProp}
+                onChange={handleChange}
+                disabled
+            />
+            <span className={checkboxStyle({ checked: isCheckedProp, disabled })} aria-checked={isCheckedProp} />
             {label}
         </label>
     )
