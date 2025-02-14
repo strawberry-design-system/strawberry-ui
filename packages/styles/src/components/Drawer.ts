@@ -7,6 +7,7 @@ export const drawerContainerStyle = css({
     position: 'fixed',
     top: 0,
     width: '$full',
+    zIndex: 1,
 })
 
 export const drawerBackdropStyle = css({

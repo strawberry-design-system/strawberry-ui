@@ -7,6 +7,7 @@ export const modalContainerStyle = css({
     position: 'fixed',
     top: 0,
     width: '$full',
+    zIndex: 1,
 })
 
 export const modalContentStyle = css({
