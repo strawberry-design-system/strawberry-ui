@@ -3,7 +3,7 @@ import { SearchBarProps } from './SearchBar.types'
 import { searchBarStyle, searchBarInputStyle, clearButtonStyle } from '@strawberry-ui/styles/components/SearchBar'
 import Icon from '../Icon'
 
-const SearchBar = ({ value = '', onChange, fullWidth }: SearchBarProps) => {
+export const SearchBar = ({ value = '', onChange, fullWidth }: SearchBarProps) => {
     const [search, setSearch] = useState(value)
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,5 +35,3 @@ const SearchBar = ({ value = '', onChange, fullWidth }: SearchBarProps) => {
         </div>
     )
 }
-
-export default SearchBar

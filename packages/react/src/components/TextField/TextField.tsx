@@ -6,10 +6,10 @@ import {
     requiredStyle,
     textFieldStyle,
     helperTextStyle,
-    errorMessageStyle
+    errorMessageStyle,
 } from '@strawberry-ui/styles/components/TextField'
 
-const TextField = ({
+export const TextField = ({
     id: customId,
     label,
     value,
@@ -21,7 +21,7 @@ const TextField = ({
     error = false,
     errorMessage,
     fullWidth = false,
-    autoFocus = false
+    autoFocus = false,
 }: TextFieldProps) => {
     const id = customId || useId('textfield')
 
@@ -42,16 +42,20 @@ const TextField = ({
                 required={required}
                 autoFocus={autoFocus}
                 aria-invalid={error ? 'true' : 'false'}
-                aria-describedby={error && errorMessage ? `${id}-error-message` : helperText ? `${id}-helper-text` : undefined}
+                aria-describedby={
+                    error && errorMessage ? `${id}-error-message` : helperText ? `${id}-helper-text` : undefined
+                }
             />
             {!error && helperText && (
-                <span id={`${id}-helper-text`} className={helperTextStyle()}>{helperText}</span>
+                <span id={`${id}-helper-text`} className={helperTextStyle()}>
+                    {helperText}
+                </span>
             )}
             {error && errorMessage && (
-                <span id={`${id}-error-message`} className={errorMessageStyle()}>{errorMessage}</span>
+                <span id={`${id}-error-message`} className={errorMessageStyle()}>
+                    {errorMessage}
+                </span>
             )}
         </div>
     )
 }
-
-export default TextField

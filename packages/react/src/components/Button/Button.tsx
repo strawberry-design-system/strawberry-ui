@@ -2,7 +2,7 @@ import { buttonStyle } from '@strawberry-ui/styles/components/Button'
 import { ButtonProps, ButtonPropsWithType, LinkProps } from './Button.types'
 import Spinner from '../Spinner'
 
-const Button = ({
+export const Button = ({
     as = 'button',
     variant = 'primary',
     size = 'medium',
@@ -53,5 +53,3 @@ const Button = ({
         </button>
     )
 }
-
-export default Button

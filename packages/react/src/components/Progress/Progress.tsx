@@ -8,7 +8,7 @@ import {
 } from '@strawberry-ui/styles/components/Progress'
 import Text from '../Text'
 
-const Progress = ({
+export const Progress = ({
     type = 'linear',
     variant = 'primary',
     value = 0,
@@ -47,5 +47,3 @@ const Progress = ({
             )
     }
 }
-
-export default Progress

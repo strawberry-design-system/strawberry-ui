@@ -5,5 +5,5 @@ import DrawerList from './DrawerList'
 export const Drawer = {
     Root: DrawerRoot,
     List: DrawerList,
-    Item: DrawerItem
+    Item: DrawerItem,
 }

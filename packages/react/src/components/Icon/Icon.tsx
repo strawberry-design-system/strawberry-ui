@@ -5,7 +5,7 @@ import Spinner from '../Spinner'
 import icons, { IconKeys } from './icons'
 import { ReactComponent as DefaultPlaceholder } from '@strawberry-ui/icons/svgs/placeholder.svg'
 
-const Icon = ({ name, className }: IconProps) => {
+export const Icon = ({ name, className }: IconProps) => {
     const [selectedIcon, setSelectedIcon] = useState<React.FC | null>(null)
     const [loading, setLoading] = useState(true)
 
@@ -28,10 +28,8 @@ const Icon = ({ name, className }: IconProps) => {
     const combinedClassName = `${iconStyle()} ${className || ''}`.trim()
 
     return (
-        <span className={combinedClassName} role="img" aria-label={name}>
+        <span className={combinedClassName} role='img' aria-label={name}>
             {loading ? <Spinner /> : <>{selectedIcon || <DefaultPlaceholder />}</>}
         </span>
     )
 }
-
-export default Icon

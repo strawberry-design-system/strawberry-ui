@@ -1,7 +1,7 @@
 import { SpinnerProps } from './Spinner.types'
 import { spinnerStyle } from '@strawberry-ui/styles/components/Spinner'
 
-const Spinner = ({ color, size }: SpinnerProps) => {
+export const Spinner = ({ color, size }: SpinnerProps) => {
     return (
         <span
             className={spinnerStyle({ size })}
@@ -9,5 +9,3 @@ const Spinner = ({ color, size }: SpinnerProps) => {
         />
     )
 }
-
-export default Spinner

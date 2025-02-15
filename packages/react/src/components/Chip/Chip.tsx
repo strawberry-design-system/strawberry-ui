@@ -3,7 +3,7 @@ import { ChipProps, FilterProps, LinkProps, DefaultProps } from './Chip.types'
 import { inputStyle, deleteButtonStyle, chipStyle } from '@strawberry-ui/styles/components/Chip'
 import Icon from '../Icon'
 
-const Chip = ({
+export const Chip = ({
     type = 'default',
     icon,
     children,
@@ -52,5 +52,3 @@ const Chip = ({
             )
     }
 }
-
-export default Chip

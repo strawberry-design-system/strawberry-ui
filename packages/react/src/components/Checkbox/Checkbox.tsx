@@ -3,7 +3,7 @@ import { CheckboxProps } from './Checkbox.types'
 import { useId } from '../../hooks'
 import { labelStyle, inputStyle, checkboxStyle } from '@strawberry-ui/styles/components/Checkbox'
 
-const Checkbox = ({ id: customId, checked, onChange, label, disabled }: CheckboxProps) => {
+export const Checkbox = ({ id: customId, checked, onChange, label, disabled }: CheckboxProps) => {
     const id = customId || useId('checkbox')
 
     const [isChecked, setIsChecked] = useState(checked ?? false)
@@ -39,5 +39,3 @@ const Checkbox = ({ id: customId, checked, onChange, label, disabled }: Checkbox
         </label>
     )
 }
-
-export default Checkbox

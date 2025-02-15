@@ -2,7 +2,7 @@ import { RadioButtonProps } from './RadioButton.types'
 import { useId } from '../../hooks'
 import { labelStyle, radioButtonStyle } from '@strawberry-ui/styles/components/RadioButton'
 
-const RadioButton = ({ id: customId, checked, onChange, label, disabled }: RadioButtonProps) => {
+export const RadioButton = ({ id: customId, checked, onChange, label, disabled }: RadioButtonProps) => {
     const id = customId || useId('radiobutton')
 
     return (
@@ -21,5 +21,3 @@ const RadioButton = ({ id: customId, checked, onChange, label, disabled }: Radio
         </label>
     )
 }
-
-export default RadioButton

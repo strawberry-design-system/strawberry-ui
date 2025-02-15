@@ -3,7 +3,7 @@ import { TooltipProps } from './Tooltip.types'
 import { useId } from '@strawberry-ui/react/hooks'
 import { containerStyle, tooltipStyle } from '@strawberry-ui/styles/components/Tooltip'
 
-const Tooltip = ({ id: customId, title, placement = 'bottom', onShow, onHide, children }: TooltipProps) => {
+export const Tooltip = ({ id: customId, title, placement = 'bottom', onShow, onHide, children }: TooltipProps) => {
     const id = customId || useId('tooltip')
 
     const [isVisible, setIsVisible] = useState(false)
@@ -37,5 +37,3 @@ const Tooltip = ({ id: customId, title, placement = 'bottom', onShow, onHide, ch
         </div>
     )
 }
-
-export default Tooltip

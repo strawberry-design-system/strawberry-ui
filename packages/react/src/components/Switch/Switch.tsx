@@ -3,7 +3,7 @@ import { SwitchProps } from './Switch.types'
 import { useId } from '../../hooks'
 import { labelStyle, inputStyle, switchStyle } from '@strawberry-ui/styles/components/Switch'
 
-const Switch = ({ id: customId, checked, onChange, label, disabled }: SwitchProps) => {
+export const Switch = ({ id: customId, checked, onChange, label, disabled }: SwitchProps) => {
     const id = customId || useId('switch')
 
     const [isChecked, setIsChecked] = useState(checked ?? false)
@@ -35,5 +35,3 @@ const Switch = ({ id: customId, checked, onChange, label, disabled }: SwitchProp
         </label>
     )
 }
-
-export default Switch
