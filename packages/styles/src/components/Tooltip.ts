@@ -2,7 +2,7 @@ import { css } from '../stitches.config'
 
 export const containerStyle = css({
     display: 'inline-block',
-    position: 'relative'
+    position: 'relative',
 })
 
 export const tooltipStyle = css({
@@ -20,38 +20,38 @@ export const tooltipStyle = css({
         visible: {
             true: {
                 opacity: 1,
-                visibility: 'visible'
+                visibility: 'visible',
             },
             false: {
                 opacity: 0,
-                visibility: 'hidden'
-            }
+                visibility: 'hidden',
+            },
         },
-        position: {
+        placement: {
             top: {
                 bottom: '100%',
                 left: '50%',
                 transform: 'translateX(-50%)',
-                marginBottom: '$small'
+                marginBottom: '$small',
             },
             right: {
                 top: '50%',
                 left: '100%',
                 transform: 'translateY(-50%)',
-                marginLeft: '$small'
+                marginLeft: '$small',
             },
             bottom: {
                 top: '100%',
                 left: '50%',
                 transform: 'translateX(-50%)',
-                marginTop: '$small'
+                marginTop: '$small',
             },
             left: {
                 top: '50%',
                 right: '100%',
                 transform: 'translateY(-50%)',
-                marginRight: '$small'
-            }
-        }
-    }
+                marginRight: '$small',
+            },
+        },
+    },
 })
