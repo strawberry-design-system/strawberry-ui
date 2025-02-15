@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { drawerContainerStyle, drawerBackdropStyle, drawerStyle } from '@strawberry-ui/styles/components/Drawer'
 import { DrawerProps } from './Drawer.types'
 
-const Drawer = ({ isOpen, onClose, children }: DrawerProps) => {
+const Drawer = ({ isOpen, onClose, placement = 'left', children }: DrawerProps) => {
     useEffect(() => {
         if (isOpen) {
             const handleEsc = (event: { key: string }) => {
@@ -24,7 +24,7 @@ const Drawer = ({ isOpen, onClose, children }: DrawerProps) => {
     return (
         <div className={drawerContainerStyle()}>
             <div className={drawerBackdropStyle()} onClick={onClose}></div>
-            <div className={drawerStyle()}>{children}</div>
+            <div className={drawerStyle({ placement })}>{children}</div>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 export interface DrawerProps {
     isOpen: boolean
     onClose: () => void
+    placement?: 'top' | 'right' | 'bottom' | 'left'
     children?: React.ReactNode
 }
 

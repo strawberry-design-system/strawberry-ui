@@ -19,9 +19,28 @@ export const drawerBackdropStyle = css({
 export const drawerStyle = css({
     backgroundColor: '$colorNeutralPrimaryBackground',
     height: '$full',
-    maxWidth: '$large',
     position: 'absolute',
     width: '$full',
+    variants: {
+        placement: {
+            top: {
+                maxHeight: '$large',
+                top: 0,
+            },
+            right: {
+                maxWidth: '$large',
+                right: 0,
+            },
+            bottom: {
+                bottom: 0,
+                maxHeight: '$large',
+            },
+            left: {
+                left: 0,
+                maxWidth: '$large',
+            },
+        },
+    },
 })
 
 export const drawerListStyle = css({
