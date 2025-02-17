@@ -1,3 +1,3 @@
-export * from './stitches.config'
 export * from './global'
 export * from './themes'
+export * from './stitches.config'
