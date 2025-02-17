@@ -1,2 +1,2 @@
-export { default as ThemeContext } from './ThemeContext'
-export { default as ThemeProvider } from './ThemeProvider'
+export { ThemeContext } from './ThemeContext'
+export { ThemeProvider } from './ThemeProvider'

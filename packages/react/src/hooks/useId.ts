@@ -12,7 +12,7 @@ function generateId(prefix: string = '') {
     return `${SYSTEM_NAME}-${randomValue}`
 }
 
-function useId(prefix: string = '') {
+export function useId(prefix: string = '') {
     const idRef = useRef<string | undefined>()
 
     if (!idRef.current) {
@@ -21,5 +21,3 @@ function useId(prefix: string = '') {
 
     return idRef.current
 }
-
-export default useId

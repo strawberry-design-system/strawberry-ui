@@ -6,6 +6,4 @@ export interface ThemeContextType {
     setTheme: (theme: ThemeKeys) => void
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
-
-export default ThemeContext
+export const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
