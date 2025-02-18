@@ -2,7 +2,8 @@ export interface PaginationTypes {
     current?: number
     defaultCurrent?: number
     total?: number
-    sibling?: number
+    siblings?: number
+    edge?: number
     onPageChange?: (page: number) => void
     disabled?: boolean
 }
