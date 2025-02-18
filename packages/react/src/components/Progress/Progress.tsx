@@ -6,7 +6,7 @@ import {
     linearStyle,
     linearInnerStyle,
 } from '@strawberry-ui/styles/components/Progress'
-import Text from '../Text'
+import { Text } from '../Text'
 
 export const Progress = ({
     type = 'linear',

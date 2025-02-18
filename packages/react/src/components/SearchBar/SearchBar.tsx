@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { SearchBarProps } from './SearchBar.types'
 import { searchBarStyle, searchBarInputStyle, clearButtonStyle } from '@strawberry-ui/styles/components/SearchBar'
-import Icon from '../Icon'
+import { Icon } from '../Icon'
 
 export const SearchBar = ({ value = '', onChange, fullWidth }: SearchBarProps) => {
     const [search, setSearch] = useState(value)

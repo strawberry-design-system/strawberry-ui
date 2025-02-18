@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { IconProps } from './Icon.types'
 import { iconStyle } from '@strawberry-ui/styles/components/Icon'
-import Spinner from '../Spinner'
+import { Spinner } from '../Spinner'
 import icons, { IconKeys } from './icons'
 import { ReactComponent as DefaultPlaceholder } from '@strawberry-ui/icons/svgs/placeholder.svg'
 

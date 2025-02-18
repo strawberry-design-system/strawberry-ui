@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ChipProps, FilterProps, LinkProps, DefaultProps } from './Chip.types'
 import { inputStyle, deleteButtonStyle, chipStyle } from '@strawberry-ui/styles/components/Chip'
-import Icon from '../Icon'
+import { Icon } from '../Icon'
 
 export const Chip = ({
     type = 'default',

@@ -1,6 +1,6 @@
 import { buttonStyle } from '@strawberry-ui/styles/components/Button'
 import { ButtonProps, ButtonPropsWithType, LinkProps } from './Button.types'
-import Spinner from '../Spinner'
+import { Spinner } from '../Spinner'
 
 export const Button = ({
     as = 'button',
