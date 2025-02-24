@@ -8,7 +8,7 @@ export const Pagination = ({
     defaultCurrent = 1,
     total = 10,
     siblings = 1,
-    edge = 5,
+    boundaries = 5,
     onPageChange,
     disabled = false,
 }: PaginationTypes) => {
@@ -48,8 +48,8 @@ export const Pagination = ({
                     page === 1 ||
                     page === total ||
                     (page >= selected - siblings && page <= selected + siblings) ||
-                    (page <= edge && selected <= edge - siblings) ||
-                    (page > total - edge && selected > total - (edge - siblings))
+                    (page <= boundaries && selected <= boundaries - siblings) ||
+                    (page > total - boundaries && selected > total - (boundaries - siblings))
                 ) {
                     return (
                         <button
