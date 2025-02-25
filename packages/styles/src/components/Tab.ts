@@ -16,8 +16,7 @@ export const tabLinkStyle = css({
                 borderBottomColor: '$colorAccent',
                 borderBottomStyle: 'solid',
                 borderBottomWidth: '$medium',
-                color: '$colorNeutralPrimaryText',
-                fontWeight: '$bold'
+                color: '$colorNeutralPrimaryText'
             },
             false: {
                 color: '$colorNeutralSecondaryText',
