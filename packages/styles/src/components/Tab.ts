@@ -1,7 +1,7 @@
 import { css } from '../stitches.config'
 
 export const tabStyle = css({
-    display: 'flex'
+    display: 'flex',
 })
 
 export const tabLinkStyle = css({
@@ -16,14 +16,15 @@ export const tabLinkStyle = css({
                 borderBottomColor: '$colorAccent',
                 borderBottomStyle: 'solid',
                 borderBottomWidth: '$medium',
-                color: '$colorNeutralPrimaryText'
+                color: '$colorNeutralPrimaryText',
+                fontWeight: '$bold',
             },
             false: {
                 color: '$colorNeutralSecondaryText',
                 '&:hover': {
-                    backgroundColor: '$colorNeutralHover'
-                }
-            }
-        }
-    }
+                    backgroundColor: '$colorNeutralHover',
+                },
+            },
+        },
+    },
 })
