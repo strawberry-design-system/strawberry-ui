@@ -107,7 +107,7 @@ export const Select = ({
     }
 
     return (
-        <div className={selectContainerStyle({ size, fullWidth, disabled })} ref={selectRef}>
+        <div className={selectContainerStyle({ fullWidth })} ref={selectRef}>
             <button
                 className={selectStyle({ size })}
                 onClick={() => setIsOpen(!disabled && !isOpen)}

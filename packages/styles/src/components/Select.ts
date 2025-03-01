@@ -2,6 +2,16 @@ import { css } from '../stitches.config'
 
 export const selectContainerStyle = css({
     position: 'relative',
+    variants: {
+        fullWidth: {
+            true: {
+                width: '$full',
+            },
+        },
+    },
+    defaultVariants: {
+        fullWidth: false,
+    },
 })
 
 export const selectStyle = css({
@@ -35,11 +45,6 @@ export const selectStyle = css({
                 paddingInline: '$xxlarge',
             },
         },
-        fullWidth: {
-            true: {
-                width: '$full',
-            },
-        },
     },
     '&:focus-within': {
         outline: 'auto',
@@ -53,7 +58,6 @@ export const selectStyle = css({
     },
     defaultVariants: {
         size: 'medium',
-        fullWidth: false,
     },
 })
 
@@ -74,6 +78,7 @@ export const selectListStyle = css({
     paddingBlock: '$medium',
     position: 'absolute',
     width: '$full',
+    zIndex: 1,
 })
 
 export const selectOptionStyle = css({
