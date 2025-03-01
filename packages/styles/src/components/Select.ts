@@ -1,6 +1,8 @@
 import { css } from '../stitches.config'
 
-export const selectContainerStyle = css({})
+export const selectContainerStyle = css({
+    position: 'relative',
+})
 
 export const selectStyle = css({
     alignItems: 'center',
@@ -9,7 +11,9 @@ export const selectStyle = css({
     borderStyle: 'solid',
     borderWidth: '$thin',
     borderRadius: '$full',
+    cursor: 'pointer',
     display: 'flex',
+    width: '$full',
     variants: {
         size: {
             small: {
@@ -69,6 +73,7 @@ export const selectListStyle = css({
     flexDirection: 'column',
     paddingBlock: '$medium',
     position: 'absolute',
+    width: '$full',
 })
 
 export const selectOptionStyle = css({
