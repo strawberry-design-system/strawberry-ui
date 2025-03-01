@@ -9,7 +9,7 @@ import {
     selectOptionStyle,
     selectOptionLabelStyle,
     selectOptionPlaceholderStyle,
-} from '../../../../styles/src/components/Select'
+} from '@strawberry-ui/styles/components/Select'
 import { Icon } from '../Icon'
 
 export const Select = ({
