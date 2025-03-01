@@ -44,7 +44,7 @@ export const Select = ({
 
     useEffect(() => {
         const onKeyDown = (e: KeyboardEvent) => {
-            e.preventDefault()
+            if (!selectRef.current?.contains(document.activeElement)) return
 
             switch (e.key) {
                 case 'Escape':
@@ -61,7 +61,15 @@ export const Select = ({
                     setFocusedOption((prev) => Math.max(prev - 1, 0))
                     break
                 case 'Enter':
+                    e.preventDefault()
+
+                    if (isControlled && !onChange) {
+                        setFocusedOption(selectedIndex)
+                    }
+
                     !isControlled && setSelectedIndex(focusedOption)
+                    onChange && onChange(fullOptions[focusedOption].value)
+
                     setIsOpen(false)
             }
         }
@@ -88,10 +96,14 @@ export const Select = ({
             setSelectedIndex(i)
         }
 
-        console.log(selectedIndex)
-
         onChange && onChange(fullOptions[i].value)
         setIsOpen(false)
+    }
+
+    const handleFocus = (i: number) => {
+        if (!isControlled || onChange) {
+            setFocusedOption(i)
+        }
     }
 
     return (
@@ -122,7 +134,7 @@ export const Select = ({
                                         : selectOptionPlaceholderStyle()
                                 }`}
                                 onClick={() => handleSelect(i)}
-                                onFocus={() => setFocusedOption(i)}
+                                onFocus={() => handleFocus(i)}
                                 type='button'
                             >
                                 {option.label}
