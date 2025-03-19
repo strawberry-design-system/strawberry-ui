@@ -31,7 +31,7 @@ yarn add strawberry-ui
 Aqui está um exemplo de como começar a usar um dos componentes:
 
 ```tsx
-import { Button } from "strawberry-ui";
+import { Button } from "strawberry-ui/react";
 
 export default function App() {
   return <Button variant="primary">Clique aqui! 🍓</Button>;
