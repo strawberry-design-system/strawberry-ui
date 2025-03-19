@@ -1,4 +1,4 @@
-O projeto ainda está em desenvolvimento, então algumas partes do documento podem ser fictícias ou sujeitas a alterações.
+⚠️ **Importante:** O projeto ainda está em desenvolvimento, então algumas partes do documento podem ser fictícias ou sujeitas a alterações.
 
 # 🍓 Strawberry UI
 
