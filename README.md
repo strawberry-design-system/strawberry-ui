@@ -16,7 +16,7 @@
 - **Modular components**: Pick only what you need, without unnecessary complexity.
 - **Guaranteed puns**: Because coding can (and should) be fun! 🍓😆
 
-## 🚀 Instalação
+## 🚀 Instalation
 
 Add Strawberry UI to your project with:
 
@@ -26,7 +26,7 @@ npm install strawberry-ui
 yarn add strawberry-ui
 ```
 
-## 🎨 Uso básico
+## 🎨 Basic use
 
 Here’s an example of how to start using one of the components:
 
@@ -38,10 +38,10 @@ export default function App() {
 }
 ```
 
-## ❤️ Contribuição
+## ❤️ Contribution
 
 Want to help make Strawberry UI even sweeter? Contributions are more than welcome! Just open an issue or a pull request in the repository.
 
-## 📜 Licença
+## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
