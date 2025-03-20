@@ -1,24 +1,24 @@
-⚠️ **Importante:** O projeto ainda está em desenvolvimento, então algumas partes do documento podem ser fictícias ou sujeitas a alterações.
+⚠️ **Important:** The project is still in development, so some parts of this document may be fictional or subject to change.
 
 # 🍓 Strawberry UI
 
-**Um UI Kit feito de dev para dev, com um toque suculento de morango!**
+**A UI Kit made by devs for devs, with a juicy strawberry touch!**
 
-## 🌟 O que é o Strawberry UI?
+## 🌟 What is Strawberry UI?
 
-O **Strawberry UI** é uma biblioteca de componentes de interface desenvolvida para facilitar a vida dos desenvolvedores. Com um visual amigável e um design inspirado em morangos, ele traz um toque doce para seus projetos e aumenta a sua produtividade.
+**Strawberry UI** is a component library designed to make developers' lives easier. With a friendly look and a strawberry-inspired design, it brings a sweet touch to your projects and boosts your productivity.
 
-## 🍓 Por que usar o Strawberry UI?
+## 🍓 Why use Strawberry UI?
 
-- **Feito para devs**: Criado pensando em quem desenvolve, tornando a implementação rápida e intuitiva.
-- **Estilização flexível**: Fácil de personalizar e adaptar às suas necessidades.
-- **Visual amigável**: Interfaces leves, agradáveis e com aquele toque de frescor.
-- **Componentes modulares**: Escolha apenas o que precisar, sem excesso de complexidade.
-- **Trocadilhos garantidos**: Porque código pode (e deve) ser divertido! 🍓😆
+- **Made for devs**: Created with developers in mind, making implementation fast and intuitive.
+- **Flexible styling**: Easy to customize and adapt to your needs.
+- **Friendly look**: Lightweight, pleasant interfaces with a fresh touch.
+- **Modular components**: Pick only what you need, without unnecessary complexity.
+- **Guaranteed puns**: Because coding can (and should) be fun! 🍓😆
 
 ## 🚀 Instalação
 
-Adicione o Strawberry UI ao seu projeto com:
+Add Strawberry UI to your project with:
 
 ```sh
 npm install strawberry-ui
@@ -28,7 +28,7 @@ yarn add strawberry-ui
 
 ## 🎨 Uso básico
 
-Aqui está um exemplo de como começar a usar um dos componentes:
+Here’s an example of how to start using one of the components:
 
 ```tsx
 import { Button } from "strawberry-ui/react";
@@ -40,8 +40,8 @@ export default function App() {
 
 ## ❤️ Contribuição
 
-Quer ajudar a deixar o Strawberry UI ainda mais doce? Contribuições são super bem-vindas! Basta abrir uma issue ou um pull request no repositório.
+Want to help make Strawberry UI even sweeter? Contributions are more than welcome! Just open an issue or a pull request in the repository.
 
 ## 📜 Licença
 
-Este projeto está sob a [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
