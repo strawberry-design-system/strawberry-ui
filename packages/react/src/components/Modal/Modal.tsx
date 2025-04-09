@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { ModalProps } from './Modal.types'
 import {
     modalContainerStyle,
-    modalContentStyle,
     backdropStyle,
     modalStyle,
 } from '@strawberry-ui/styles/components/Modal'
@@ -10,8 +9,8 @@ import {
 export const Modal = ({ isOpen, onClose, children }: ModalProps) => {
     useEffect(() => {
         if (isOpen) {
-            const handleEsc = (event: { key: string }) => {
-                if (event.key === 'Escape') {
+            const handleEsc = (e: KeyboardEvent>) => {
+                if (e.key === 'Escape') {
                     onClose()
                 }
             }
@@ -24,10 +23,15 @@ export const Modal = ({ isOpen, onClose, children }: ModalProps) => {
 
     if (!isOpen) return null
 
+    const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (e.target === e.currentTarget) {
+            onClose?.()
+        }
+    }
+
     return (
         <div className={modalContainerStyle()}>
-            <div className={modalContentStyle()}>
-                <div className={backdropStyle()} onClick={onClose}></div>
+            <div className={backdropStyle()} onClick={handleOverlayClick}>
                 <div className={modalStyle()}>{children}</div>
             </div>
         </div>

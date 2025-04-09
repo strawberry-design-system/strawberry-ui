@@ -10,23 +10,15 @@ export const modalContainerStyle = css({
     zIndex: 1,
 })
 
-export const modalContentStyle = css({
+export const backdropStyle = css({
     alignItems: 'center',
+    backgroundColor: '$colorNeutralBackdrop',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     left: 0,
     minHeight: '$full',
     padding: '$xxlarge',
-    position: 'absolute',
-    top: 0,
-    width: '$full',
-})
-
-export const backdropStyle = css({
-    backgroundColor: '$colorNeutralBackdrop',
-    height: '$full',
-    left: 0,
     position: 'absolute',
     top: 0,
     width: '$full',
