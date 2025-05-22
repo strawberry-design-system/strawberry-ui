@@ -1,14 +1,15 @@
 {
-  "name": "@strawberry-ui/icons",
-  "version": "1.0.0",
-  "license": "MIT",
-  "scripts": {
-    "build": "echo 'No build step required for SVGs'"
-  },
-  "files": [
-    "src/svgs/**/*"
-  ],
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@strawberry-ui/icons",
+	"version": "1.0.0",
+	"main": "src/index.js",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc"
+	},
+	"files": [
+		"src/svgs/**/*"
+	],
+	"publishConfig": {
+		"access": "public"
+	}
 }
