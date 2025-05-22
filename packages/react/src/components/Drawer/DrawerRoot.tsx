@@ -1,32 +1,37 @@
 import { useEffect } from 'react'
-import { drawerContainerStyle, drawerBackdropStyle, drawerStyle } from '@strawberry-ui/styles/components/Drawer'
+import { drawerContainerStyle, drawerStyle } from '@strawberry-ui/styles/components/Drawer'
 import { DrawerProps } from './Drawer.types'
 
 const Drawer = ({ isOpen, onClose, placement = 'left', children }: DrawerProps) => {
-    useEffect(() => {
-        if (isOpen) {
-            const handleEsc = (event: { key: string }) => {
-                if (event.key === 'Escape') {
-                    onClose()
-                }
-            }
+	useEffect(() => {
+		if (isOpen) {
+			const handleEsc = (event: { key: string }) => {
+				if (event.key === 'Escape') {
+					onClose()
+				}
+			}
 
-            window.addEventListener('keydown', handleEsc)
+			window.addEventListener('keydown', handleEsc)
 
-            return () => {
-                window.removeEventListener('keydown', handleEsc)
-            }
-        }
-    }, [isOpen, onClose])
+			return () => {
+				window.removeEventListener('keydown', handleEsc)
+			}
+		}
+	}, [isOpen, onClose])
 
-    if (!isOpen) return null
+	if (!isOpen) return null
 
-    return (
-        <div className={drawerContainerStyle()}>
-            <div className={drawerBackdropStyle()} onClick={onClose}></div>
-            <div className={drawerStyle({ placement })}>{children}</div>
-        </div>
-    )
+	const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+		if (e.target === e.currentTarget) {
+			onClose?.()
+		}
+	}
+
+	return (
+		<div className={drawerContainerStyle()} onClick={handleOverlayClick}>
+			<div className={drawerStyle({ placement })}>{children}</div>
+		</div>
+	)
 }
 
 export default Drawer
