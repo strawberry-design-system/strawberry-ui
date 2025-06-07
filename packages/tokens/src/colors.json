@@ -2,8 +2,8 @@
 	"brand": {
 		"light": "#e2b3b9",
 		"mid": "#ffe1e2",
-		"dark": "#b12927",
-		"low": "#7a1a1a"
+		"dark": "#cd3737",
+		"low": "#b12927"
 	},
 	"positive": "#28a745",
 	"negative": "#dc3545",
