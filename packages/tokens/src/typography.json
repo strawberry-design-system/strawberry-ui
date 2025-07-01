@@ -11,9 +11,10 @@
 		"xlarge": "20px"
 	},
 	"fontWeight": {
-		"light": 300,
+		"light": 200,
 		"regular": 400,
-		"bold": 800
+		"bold": 600,
+		"extrabold": 800
 	},
 	"lineHeight": {
 		"small": "1.5",
