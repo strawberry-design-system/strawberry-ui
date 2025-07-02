@@ -19,6 +19,12 @@ export const headingStyle = css({
 			},
 			xlarge: {
 				fontSize: '$xlarge'
+			},
+			xxlarge: {
+				fontSize: '$xxlarge'
+			},
+			xxxlarge: {
+				fontSize: '$xxxlarge'
 			}
 		}
 	}

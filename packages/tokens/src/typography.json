@@ -7,8 +7,10 @@
 		"xsmall": "12px",
 		"small": "14px",
 		"medium": "16px",
-		"large": "18px",
-		"xlarge": "20px"
+		"large": "20px",
+		"xlarge": "24px",
+		"xxlarge": "32px",
+		"xxxlarge": "40px"
 	},
 	"fontWeight": {
 		"light": 200,
