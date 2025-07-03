@@ -9,7 +9,7 @@ export const tooltipStyle = css({
 	backgroundColor: '$colorNeutralPrimaryText',
 	borderRadius: '$xsmall',
 	color: '$colorNeutralPrimaryBackground',
-	fontSize: '$small',
+	fontSize: '$xsmall',
 	padding: '$small',
 	pointerEvents: 'none',
 	position: 'absolute',
