@@ -1,28 +1,51 @@
-export interface BaseProps {
-    variant?: 'primary' | 'secondary' | 'tertiary' | 'negative'
-    size?: 'small' | 'medium' | 'large'
-    fullWidth?: boolean
-    icon?: React.ReactNode
-    iconPosition?: 'start' | 'end'
-    children?: React.ReactNode
+type CommonProps = {
+	variant?: 'primary' | 'secondary' | 'tertiary' | 'negative'
+	size?: 'small' | 'medium' | 'large'
+	fullWidth?: boolean
+	iconPosition?: 'start' | 'end'
 }
 
-export interface ButtonPropsWithType extends BaseProps {
-    as?: 'button'
-    type?: 'button' | 'submit' | 'reset'
-    onClick?: React.MouseEventHandler<HTMLButtonElement>
-    disabled?: boolean
-    isLoading?: boolean
+type IconOnly = {
+	icon: React.ReactNode
+	children?: never
 }
 
-export interface LinkProps extends BaseProps {
-    as: 'a'
-    type?: never
-    href?: string
-    target?: '_blank' | '_self' | '_parent' | '_top' | string
-    rel?: string
-    disabled?: never
-    isLoading?: never
+type TextOnly = {
+	children: React.ReactNode
+	icon?: never
 }
 
-export type ButtonProps = ButtonPropsWithType | LinkProps
+type IconAndText = {
+	children: React.ReactNode
+	icon: React.ReactNode
+}
+
+type ButtonElement = {
+	type?: 'button' | 'submit' | 'reset'
+	onClick?: React.MouseEventHandler<HTMLButtonElement>
+	disabled?: boolean
+	isLoading?: boolean
+}
+
+type ButtonElementDefault = ButtonElement & {
+	as?: undefined
+}
+
+type ButtonElementWithAs = ButtonElement & {
+	as: 'button'
+}
+
+type LinkElement = {
+	as: 'a'
+	href: string
+	target?: '_blank' | '_self' | '_parent' | '_top' | string
+	rel?: string
+}
+
+type IconOrText = IconOnly | TextOnly | IconAndText
+
+type ButtonElementCombined = ButtonElementDefault | ButtonElementWithAs
+
+type ButtonOrLink = ButtonElementCombined | LinkElement
+
+export type ButtonProps = CommonProps & IconOrText & ButtonOrLink
