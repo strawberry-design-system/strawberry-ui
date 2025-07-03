@@ -10,58 +10,30 @@ export const buttonStyle = css({
 	justifyContent: 'center',
 	textDecoration: 'none',
 	transition: 'background-color 0.3s',
+	'&:disabled': {
+		cursor: 'not-allowed',
+		opacity: 0.5
+	},
 	variants: {
 		variant: {
 			primary: {
-				backgroundColor: '$colorAccent',
-				border: 'none',
-				color: '$colorNeutralPrimaryBackground',
-				'&:not(:disabled):hover': {
-					backgroundColor: '$colorAccentHover'
-				},
-				'&:disabled': {
-					backgroundColor: '$colorNeutralDisabledBackground',
-					color: '$colorNeutralDisabledText'
-				}
+				border: 'none'
 			},
 			secondary: {
 				backgroundColor: 'transparent',
-				borderColor: '$colorNeutralBorder',
 				borderStyle: 'solid',
-				borderWidth: '$thin',
-				color: '$colorNeutralPrimaryText',
-				'&:not(:disabled):hover': {
-					backgroundColor: '$colorNeutralHover'
-				},
-				'&:disabled': {
-					borderColor: '$colorNeutralDisabledBackground',
-					color: '$colorNeutralDisabledText'
-				}
+				borderWidth: '$thin'
 			},
 			tertiary: {
 				backgroundColor: 'transparent',
-				border: 'none',
-				color: '$colorNeutralPrimaryText',
-				'&:not(:disabled):hover': {
-					backgroundColor: '$colorNeutralHover'
-				},
-				'&:disabled': {
-					color: '$colorNeutralDisabledText'
-				}
-			},
-			negative: {
-				backgroundColor: 'transparent',
-				border: 'none',
-				color: '$colorNegative',
-				'&:not(:disabled):hover': {
-					backgroundColor: '$colorNegative',
-					border: 'none',
-					color: '$colorNeutralPrimaryBackground'
-				},
-				'&:disabled': {
-					color: '$colorNeutralDisabledText'
-				}
+				border: 'none'
 			}
+		},
+		tone: {
+			default: {},
+			negative: {},
+			positive: {},
+			warning: {}
 		},
 		size: {
 			small: {
@@ -89,35 +61,192 @@ export const buttonStyle = css({
 			true: {}
 		}
 	},
-	'&:disabled': {
-		cursor: 'not-allowed',
-		opacity: 0.5
-	},
 	compoundVariants: [
+		{ onlyIcon: true, size: 'small', css: { padding: '$small' } },
+		{ onlyIcon: true, size: 'medium', css: { padding: '$medium' } },
+		{ onlyIcon: true, size: 'large', css: { padding: '$large' } },
 		{
-			onlyIcon: 'true',
-			size: 'small',
+			variant: 'primary',
+			tone: 'default',
 			css: {
-				padding: '$small'
+				backgroundColor: '$colorAccent',
+				color: '$colorNeutralPrimaryBackground',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorAccentHover'
+				},
+				'&:disabled': {
+					backgroundColor: '$colorNeutralDisabledBackground',
+					color: '$colorNeutralDisabledText'
+				}
 			}
 		},
 		{
-			onlyIcon: 'true',
-			size: 'medium',
+			variant: 'secondary',
+			tone: 'default',
 			css: {
-				padding: '$medium'
+				borderColor: '$colorNeutralBorder',
+				color: '$colorNeutralPrimaryText',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorNeutralHover'
+				},
+				'&:disabled': {
+					borderColor: '$colorNeutralDisabledBackground',
+					color: '$colorNeutralDisabledText'
+				}
 			}
 		},
 		{
-			onlyIcon: 'true',
-			size: 'large',
+			variant: 'tertiary',
+			tone: 'default',
 			css: {
-				padding: '$large'
+				color: '$colorNeutralPrimaryText',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorNeutralHover'
+				},
+				'&:disabled': {
+					color: '$colorNeutralDisabledText'
+				}
+			}
+		},
+		{
+			variant: 'primary',
+			tone: 'positive',
+			css: {
+				backgroundColor: '$colorPositive',
+				color: '$colorNeutralPrimaryBackground',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorPositiveHover'
+				},
+				'&:disabled': {
+					backgroundColor: '$colorNeutralDisabledBackground',
+					color: '$colorNeutralDisabledText'
+				}
+			}
+		},
+		{
+			variant: 'secondary',
+			tone: 'positive',
+			css: {
+				backgroundColor: 'transparent',
+				borderColor: '$colorPostive',
+				color: '$colorPostive',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorNeutralHover'
+				},
+				'&:disabled': {
+					borderColor: '$colorNeutralDisabledBackground',
+					color: '$colorNeutralDisabledText'
+				}
+			}
+		},
+		{
+			variant: 'tertiary',
+			tone: 'positive',
+			css: {
+				backgroundColor: 'transparent',
+				color: '$colorPositive',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorNeutralHover'
+				},
+				'&:disabled': {
+					color: '$colorNeutralDisabledText'
+				}
+			}
+		},
+		{
+			variant: 'primary',
+			tone: 'warning',
+			css: {
+				backgroundColor: '$colorWarning',
+				color: '$colorNeutralPrimaryBackground',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorWarningHover'
+				},
+				'&:disabled': {
+					backgroundColor: '$colorNeutralDisabledBackground',
+					color: '$colorNeutralDisabledText'
+				}
+			}
+		},
+		{
+			variant: 'secondary',
+			tone: 'warning',
+			css: {
+				backgroundColor: 'transparent',
+				borderColor: '$colorWarning',
+				color: '$colorWarning',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorNeutralHover'
+				},
+				'&:disabled': {
+					borderColor: '$colorNeutralDisabledBackground',
+					color: '$colorNeutralDisabledText'
+				}
+			}
+		},
+		{
+			variant: 'tertiary',
+			tone: 'warning',
+			css: {
+				backgroundColor: 'transparent',
+				color: '$colorWarning',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorNeutralHover'
+				},
+				'&:disabled': {
+					color: '$colorNeutralDisabledText'
+				}
+			}
+		},
+		{
+			variant: 'primary',
+			tone: 'negative',
+			css: {
+				backgroundColor: '$colorNegative',
+				color: '$colorNeutralPrimaryBackground',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorNegativeHover'
+				},
+				'&:disabled': {
+					backgroundColor: '$colorNeutralDisabledBackground',
+					color: '$colorNeutralDisabledText'
+				}
+			}
+		},
+		{
+			variant: 'secondary',
+			tone: 'negative',
+			css: {
+				backgroundColor: 'transparent',
+				borderColor: '$colorNegative',
+				color: '$colorNegative',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorNeutralHover'
+				},
+				'&:disabled': {
+					borderColor: '$colorNeutralDisabledBackground',
+					color: '$colorNeutralDisabledText'
+				}
+			}
+		},
+		{
+			variant: 'tertiary',
+			tone: 'negative',
+			css: {
+				backgroundColor: 'transparent',
+				color: '$colorNegative',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorNeutralHover'
+				},
+				'&:disabled': {
+					color: '$colorNeutralDisabledText'
+				}
 			}
 		}
 	],
 	defaultVariants: {
 		variant: 'primary',
+		tone: 'default',
 		size: 'medium',
 		fullWidth: false,
 		onlyIcon: false

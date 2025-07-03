@@ -35,7 +35,7 @@ type ButtonElementWithAs = ButtonElement & {
 	as: 'button'
 }
 
-type LinkElement = {
+export type LinkElement = {
 	as: 'a'
 	href: string
 	target?: '_blank' | '_self' | '_parent' | '_top' | string
@@ -44,7 +44,7 @@ type LinkElement = {
 
 type IconOrText = IconOnly | TextOnly | IconAndText
 
-type ButtonElementCombined = ButtonElementDefault | ButtonElementWithAs
+export type ButtonElementCombined = ButtonElementDefault | ButtonElementWithAs
 
 type ButtonOrLink = ButtonElementCombined | LinkElement
 
