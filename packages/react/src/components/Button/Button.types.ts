@@ -1,8 +1,8 @@
 type CommonProps = {
 	variant?: 'primary' | 'secondary' | 'tertiary' | 'negative'
 	size?: 'small' | 'medium' | 'large'
-	fullWidth?: boolean
 	iconPosition?: 'start' | 'end'
+	fullWidth?: boolean
 }
 
 type IconOnly = {
@@ -11,13 +11,13 @@ type IconOnly = {
 }
 
 type TextOnly = {
-	children: React.ReactNode
 	icon?: never
+	children: React.ReactNode
 }
 
 type IconAndText = {
-	children: React.ReactNode
 	icon: React.ReactNode
+	children: React.ReactNode
 }
 
 type ButtonElement = {
