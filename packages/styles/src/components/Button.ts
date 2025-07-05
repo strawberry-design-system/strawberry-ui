@@ -16,21 +16,22 @@ export const buttonStyle = css({
 	},
 	variants: {
 		variant: {
-			primary: {
+			filled: {
 				border: 'none'
 			},
-			secondary: {
+			outline: {
 				backgroundColor: 'transparent',
 				borderStyle: 'solid',
 				borderWidth: '$thin'
 			},
-			tertiary: {
+			ghost: {
 				backgroundColor: 'transparent',
 				border: 'none'
 			}
 		},
 		tone: {
-			default: {},
+			accent: {},
+			neutral: {},
 			negative: {},
 			positive: {},
 			warning: {}
@@ -66,8 +67,8 @@ export const buttonStyle = css({
 		{ onlyIcon: true, size: 'medium', css: { padding: '$medium' } },
 		{ onlyIcon: true, size: 'large', css: { padding: '$large' } },
 		{
-			variant: 'primary',
-			tone: 'default',
+			variant: 'filled',
+			tone: 'accent',
 			css: {
 				backgroundColor: '$colorAccent',
 				color: '$colorNeutralPrimaryBackground',
@@ -81,8 +82,51 @@ export const buttonStyle = css({
 			}
 		},
 		{
-			variant: 'secondary',
-			tone: 'default',
+			variant: 'outline',
+			tone: 'accent',
+			css: {
+				borderColor: '$colorAccent',
+				color: '$colorAccent',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorAccentSoft'
+				},
+				'&:disabled': {
+					borderColor: '$colorNeutralDisabledBackground',
+					color: '$colorNeutralDisabledText'
+				}
+			}
+		},
+		{
+			variant: 'ghost',
+			tone: 'accent',
+			css: {
+				color: '$colorAccent',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorAccentSoft'
+				},
+				'&:disabled': {
+					color: '$colorNeutralDisabledText'
+				}
+			}
+		},
+		{
+			variant: 'filled',
+			tone: 'neutral',
+			css: {
+				backgroundColor: '$colorNeutralSecondaryBackground',
+				color: '$colorNeutralPrimaryBackground',
+				'&:not(:disabled):hover': {
+					backgroundColor: '$colorNeutralSecondaryBackgroundHover'
+				},
+				'&:disabled': {
+					backgroundColor: '$colorNeutralDisabledBackground',
+					color: '$colorNeutralDisabledText'
+				}
+			}
+		},
+		{
+			variant: 'outline',
+			tone: 'neutral',
 			css: {
 				borderColor: '$colorNeutralBorder',
 				color: '$colorNeutralPrimaryText',
@@ -96,8 +140,8 @@ export const buttonStyle = css({
 			}
 		},
 		{
-			variant: 'tertiary',
-			tone: 'default',
+			variant: 'ghost',
+			tone: 'neutral',
 			css: {
 				color: '$colorNeutralPrimaryText',
 				'&:not(:disabled):hover': {
@@ -109,7 +153,7 @@ export const buttonStyle = css({
 			}
 		},
 		{
-			variant: 'primary',
+			variant: 'filled',
 			tone: 'positive',
 			css: {
 				backgroundColor: '$colorPositive',
@@ -124,7 +168,7 @@ export const buttonStyle = css({
 			}
 		},
 		{
-			variant: 'secondary',
+			variant: 'outline',
 			tone: 'positive',
 			css: {
 				backgroundColor: 'transparent',
@@ -140,7 +184,7 @@ export const buttonStyle = css({
 			}
 		},
 		{
-			variant: 'tertiary',
+			variant: 'ghost',
 			tone: 'positive',
 			css: {
 				backgroundColor: 'transparent',
@@ -154,7 +198,7 @@ export const buttonStyle = css({
 			}
 		},
 		{
-			variant: 'primary',
+			variant: 'filled',
 			tone: 'warning',
 			css: {
 				backgroundColor: '$colorWarning',
@@ -169,7 +213,7 @@ export const buttonStyle = css({
 			}
 		},
 		{
-			variant: 'secondary',
+			variant: 'outline',
 			tone: 'warning',
 			css: {
 				backgroundColor: 'transparent',
@@ -185,7 +229,7 @@ export const buttonStyle = css({
 			}
 		},
 		{
-			variant: 'tertiary',
+			variant: 'ghost',
 			tone: 'warning',
 			css: {
 				backgroundColor: 'transparent',
@@ -199,7 +243,7 @@ export const buttonStyle = css({
 			}
 		},
 		{
-			variant: 'primary',
+			variant: 'filled',
 			tone: 'negative',
 			css: {
 				backgroundColor: '$colorNegative',
@@ -214,7 +258,7 @@ export const buttonStyle = css({
 			}
 		},
 		{
-			variant: 'secondary',
+			variant: 'outline',
 			tone: 'negative',
 			css: {
 				backgroundColor: 'transparent',
@@ -230,7 +274,7 @@ export const buttonStyle = css({
 			}
 		},
 		{
-			variant: 'tertiary',
+			variant: 'ghost',
 			tone: 'negative',
 			css: {
 				backgroundColor: 'transparent',
@@ -245,8 +289,8 @@ export const buttonStyle = css({
 		}
 	],
 	defaultVariants: {
-		variant: 'primary',
-		tone: 'default',
+		variant: 'filled',
+		tone: 'accent',
 		size: 'medium',
 		fullWidth: false,
 		onlyIcon: false

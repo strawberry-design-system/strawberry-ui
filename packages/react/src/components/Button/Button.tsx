@@ -4,8 +4,8 @@ import { Spinner } from '../Spinner'
 
 export const Button = ({
 	as = 'button',
-	variant = 'primary',
-	tone = 'default',
+	variant = 'filled',
+	tone = 'accent',
 	size = 'medium',
 	fullWidth = false,
 	icon,

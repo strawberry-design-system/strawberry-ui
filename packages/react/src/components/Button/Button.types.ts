@@ -1,5 +1,6 @@
 type CommonProps = {
-	variant?: 'primary' | 'secondary' | 'tertiary' | 'negative'
+	variant?: 'filled' | 'outline' | 'ghost'
+	tone?: 'accent' | 'neutral' | 'positive' | 'negative' | 'warning'
 	size?: 'small' | 'medium' | 'large'
 	iconPosition?: 'start' | 'end'
 	fullWidth?: boolean
