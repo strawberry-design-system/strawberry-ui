@@ -12,6 +12,7 @@ export const { css, globalCss, keyframes, getCssText, theme, createTheme, config
 		colors: {
 			colorAccent: colors.brand.dark,
 			colorAccentHover: colors.brand.low,
+			colorAccentSoft: `${colors.brand.dark}20`,
 			colorNegative: colors.negative,
 			colorPositive: colors.positive,
 			colorWarning: colors.warning,
