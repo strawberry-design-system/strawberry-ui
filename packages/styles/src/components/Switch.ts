@@ -33,7 +33,7 @@ export const switchStyle = css({
 		aspectRatio: '1/1',
 		backgroundColor: '$colorNeutralPrimaryBackground',
 		borderRadius: '$full',
-		boxShadow: '$medium',
+		boxShadow: '$small',
 		content: '',
 		fontSize: '$xsmall',
 		height: '85%',
