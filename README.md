@@ -34,7 +34,7 @@ Here's an example of how to use one of the components:
 import { Button } from "strawberry-ui/react";
 
 export default function App() {
-  return <Button variant="primary">Click me</Button>;
+  return <Button variant="outline" tone="neutral">Click me</Button>;
 }
 ```
 
