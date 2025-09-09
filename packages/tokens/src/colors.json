@@ -5,9 +5,30 @@
 		"dark": "#cd3737",
 		"low": "#b12927"
 	},
-	"positive": "#28a745",
-	"negative": "#dc3545",
-	"warning": "#ffc107",
+	"positive": {
+		"light": "",
+		"mid": "",
+		"dark": "#28a745",
+		"low": ""
+	},
+	"negative": {
+		"light": "",
+		"mid": "",
+		"dark": "#dc3545",
+		"low": ""
+	},
+	"warning": {
+		"light": "",
+		"mid": "",
+		"dark": "#ffc107",
+		"low": ""
+	},
+	"information": {
+		"light": "",
+		"mid": "",
+		"dark": "#17a2b8",
+		"low": ""
+	},
 	"white": "#ffffff",
 	"black": "#000000",
 	"gray": {

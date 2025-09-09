@@ -5,7 +5,7 @@ import {
 	requiredStyle,
 	helperTextStyle,
 	errorMessageStyle
-} from '@strawberry-ui/styles/components/TextField'
+} from '@strawberry-ui/styles/components/TextField.css'
 
 export const Field = ({
 	id,
@@ -22,18 +22,18 @@ export const Field = ({
 	return (
 		<div className={containerStyle({ fullWidth })}>
 			{label && (
-				<label htmlFor={id} className={labelStyle()}>
-					{label} {required && <span className={requiredStyle()}>*</span>}
+				<label htmlFor={id} className={labelStyle}>
+					{label} {required && <span className={requiredStyle}>*</span>}
 				</label>
 			)}
 			{children}
 			{!error && helperText && (
-				<span id={`${id}-helper-text`} className={helperTextStyle()}>
+				<span id={`${id}-helper-text`} className={helperTextStyle}>
 					{helperText}
 				</span>
 			)}
 			{error && errorMessage && (
-				<span id={`${id}-error-message`} className={errorMessageStyle()}>
+				<span id={`${id}-error-message`} className={errorMessageStyle}>
 					{errorMessage}
 				</span>
 			)}

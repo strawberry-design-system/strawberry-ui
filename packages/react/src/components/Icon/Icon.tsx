@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { IconProps } from './Icon.types'
-import { iconStyle } from '@strawberry-ui/styles/components/Icon'
+import { iconStyle } from '@strawberry-ui/styles/components/Icon.css'
 import { Spinner } from '../Spinner'
 import { IconName, icons } from '@strawberry-ui/icons'
 
@@ -17,7 +17,7 @@ export function Icon({ name = 'placeholder', className }: IconProps & { name?: I
 			.finally(() => setLoading(false))
 	}, [name])
 
-	const combinedClassName = `${iconStyle()} ${className || ''}`.trim()
+	const combinedClassName = `${iconStyle} ${className || ''}`.trim()
 
 	return (
 		<>

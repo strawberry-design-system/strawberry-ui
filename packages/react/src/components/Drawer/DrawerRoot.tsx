@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { drawerContainerStyle, drawerStyle } from '@strawberry-ui/styles/components/Drawer'
+import { drawerContainerStyle, drawerStyle } from '@strawberry-ui/styles/components/Drawer.css'
 import { DrawerProps } from './Drawer.types'
 
 const Drawer = ({ isOpen, onClose, placement = 'left', children }: DrawerProps) => {
@@ -28,7 +28,7 @@ const Drawer = ({ isOpen, onClose, placement = 'left', children }: DrawerProps) 
 	}
 
 	return (
-		<div className={drawerContainerStyle()} onClick={handleOverlayClick}>
+		<div className={drawerContainerStyle} onClick={handleOverlayClick}>
 			<div className={drawerStyle({ placement })}>{children}</div>
 		</div>
 	)

@@ -1,4 +1,4 @@
-import { buttonStyle } from '@strawberry-ui/styles/components/Button'
+import { buttonStyle } from '@strawberry-ui/styles/components/Button.css'
 import { ButtonElementCombined, ButtonProps, LinkElement } from './Button.types'
 import { Spinner } from '../Spinner'
 

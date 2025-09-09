@@ -1,8 +1,8 @@
-import { darkTheme } from './dark'
+import { darkTheme } from './dark.css'
 
 export const themes = {
-  light: {},
-  dark: darkTheme
+	light: {},
+	dark: darkTheme
 }
 
 export type ThemeKeys = keyof typeof themes

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { ModalProps } from './Modal.types'
-import { modalContainerStyle, backdropStyle, modalStyle } from '@strawberry-ui/styles/components/Modal'
+import { modalContainerStyle, backdropStyle, modalStyle } from '@strawberry-ui/styles/components/Modal.css'
 
 export const Modal = ({ isOpen, onClose, children }: ModalProps) => {
 	useEffect(() => {
@@ -26,9 +26,9 @@ export const Modal = ({ isOpen, onClose, children }: ModalProps) => {
 	}
 
 	return (
-		<div className={modalContainerStyle()}>
-			<div className={backdropStyle()} onClick={handleOverlayClick}>
-				<div className={modalStyle()}>{children}</div>
+		<div className={modalContainerStyle}>
+			<div className={backdropStyle} onClick={handleOverlayClick}>
+				<div className={modalStyle}>{children}</div>
 			</div>
 		</div>
 	)

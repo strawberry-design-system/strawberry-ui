@@ -1,6 +1,6 @@
 import { TextFieldProps } from './TextField.types'
 import { useId } from '@strawberry-ui/react/hooks'
-import { textFieldStyle } from '@strawberry-ui/styles/components/TextField'
+import { textFieldStyle } from '@strawberry-ui/styles/components/TextField.css'
 import { Field } from '../Field'
 
 export const TextField = ({

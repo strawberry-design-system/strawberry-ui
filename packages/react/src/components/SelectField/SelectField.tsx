@@ -9,7 +9,7 @@ import {
 	selectOptionStyle,
 	selectOptionLabelStyle,
 	selectOptionPlaceholderStyle
-} from '@strawberry-ui/styles/components/SelectField'
+} from '@strawberry-ui/styles/components/SelectField.css'
 import { Icon } from '../Icon'
 import { Field } from '../Field'
 import { useId } from '@strawberry-ui/react/hooks'
@@ -124,20 +124,20 @@ export const SelectField = ({
 					aria-disabled={disabled}
 					role='combobox'
 				>
-					<p className={selectedIndex > 0 ? selectLabelStyle() : selectPlaceholderStyle()}>
+					<p className={selectedIndex > 0 ? selectLabelStyle : selectPlaceholderStyle}>
 						{fullOptions[selectedIndex].label}
 					</p>
 					{isOpen ? <Icon name='arrow-up' /> : <Icon name='arrow-down' />}
 				</button>
 				{isOpen && (
-					<ul className={selectListStyle()} role='listbox'>
+					<ul className={selectListStyle} role='listbox'>
 						{fullOptions.map((option, i) => (
 							<li key={i} role='option' aria-selected={selectedIndex === i}>
 								<button
 									className={`${selectOptionStyle({ size, focused: focusedOption === i })} ${
 										i > 0
 											? selectOptionLabelStyle({ actived: selectedIndex === i })
-											: selectOptionPlaceholderStyle()
+											: selectOptionPlaceholderStyle
 									}`}
 									onClick={() => handleSelect(i)}
 									onFocus={() => handleFocus(i)}
