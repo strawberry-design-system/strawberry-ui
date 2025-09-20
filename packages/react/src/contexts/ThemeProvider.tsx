@@ -9,7 +9,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 	})
 
 	useEffect(() => {
-		//document.body.className = theme === 'light' ? '' : themes[theme]
+		document.body.className = themes[theme]
 		localStorage.setItem('theme', theme)
 	}, [theme])
 

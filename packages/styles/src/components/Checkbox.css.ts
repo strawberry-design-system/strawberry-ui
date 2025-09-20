@@ -1,11 +1,12 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const labelStyle = recipe({
 	base: {
 		alignItems: 'center',
-		color: vars.color.text.default,
+		color: themeVars.color.text.default,
 		cursor: 'pointer',
 		display: 'flex',
 		fontSize: vars.font.size.small,
@@ -14,7 +15,7 @@ export const labelStyle = recipe({
 	variants: {
 		disabled: {
 			true: {
-				color: vars.color.text.disabled,
+				color: themeVars.color.text.disabled,
 				cursor: 'not-allowed',
 				opacity: 0.5
 			}
@@ -40,10 +41,10 @@ export const checkboxStyle = recipe({
 	variants: {
 		checked: {
 			true: {
-				backgroundColor: vars.color.accent.default,
-				border: vars.color.accent.default,
+				backgroundColor: themeVars.color.accent.default,
+				border: themeVars.color.accent.default,
 				':after': {
-					color: vars.color.text.inverse,
+					color: themeVars.color.text.inverse,
 					content: '✔',
 					fontSize: vars.font.size.xsmall,
 					left: '50%',
@@ -54,12 +55,12 @@ export const checkboxStyle = recipe({
 			},
 			false: {
 				backgroundColor: 'transparent',
-				borderColor: vars.color.border
+				borderColor: themeVars.color.border
 			}
 		},
 		disabled: {
 			true: {
-				borderColor: vars.color.surface.disabled
+				borderColor: themeVars.color.surface.disabled
 			}
 		}
 	},
@@ -70,7 +71,7 @@ export const checkboxStyle = recipe({
 				checked: true
 			},
 			style: {
-				backgroundColor: vars.color.surface.disabled
+				backgroundColor: themeVars.color.surface.disabled
 			}
 		}
 	]

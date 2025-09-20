@@ -1,10 +1,11 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const searchBarStyle = recipe({
 	base: {
 		alignItems: 'center',
-		borderColor: vars.color.border,
+		borderColor: themeVars.color.border,
 		borderRadius: vars.border.radii.full,
 		borderStyle: 'solid',
 		borderWidth: vars.border.width.thin,
@@ -13,7 +14,7 @@ export const searchBarStyle = recipe({
 		justifyContent: 'center',
 		':focus-within': {
 			outline: 'auto',
-			outlineColor: vars.color.accent.default
+			outlineColor: themeVars.color.accent.default
 		}
 	},
 	variants: {
@@ -37,7 +38,7 @@ export const searchBarInputStyle = recipe({
 	base: {
 		backgroundColor: 'transparent',
 		border: 'none',
-		color: vars.color.text.default,
+		color: themeVars.color.text.default,
 		fontSize: vars.font.size.small,
 		paddingBlock: vars.space.medium,
 		outline: 'none',
@@ -58,14 +59,14 @@ export const clearButtonStyle = recipe({
 		backgroundColor: 'transparent',
 		border: 'none',
 		borderRadius: '50%',
-		color: vars.color.text.default,
+		color: themeVars.color.text.default,
 		cursor: 'pointer',
 		display: 'flex',
 		fontSize: vars.font.size.small,
 		justifyContent: 'center',
 		padding: vars.space.xsmall,
 		':hover': {
-			backgroundColor: vars.color.surface.soft
+			backgroundColor: themeVars.color.surface.soft
 		}
 	}
 })

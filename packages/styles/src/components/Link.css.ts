@@ -1,13 +1,14 @@
 import { style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const linkStyle = style({
-	color: vars.color.accent.default,
+	color: themeVars.color.accent.default,
 	cursor: 'pointer',
 	fontSize: vars.font.size.small,
 	textDecoration: 'none',
 	':hover': {
-		color: vars.color.accent.hover,
+		color: themeVars.color.accent.hover,
 		textDecoration: 'underline'
 	}
 })

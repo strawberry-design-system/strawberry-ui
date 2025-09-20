@@ -1,6 +1,7 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const inputStyle = style({
 	display: 'none'
@@ -10,7 +11,7 @@ export const deleteButtonStyle = style({
 	alignItems: 'center',
 	backgroundColor: 'transparent',
 	border: 'none',
-	color: vars.color.text.default,
+	color: themeVars.color.text.default,
 	cursor: 'pointer',
 	display: 'flex',
 	fontSize: vars.font.size.small,
@@ -21,11 +22,11 @@ export const chipStyle = recipe({
 	base: {
 		alignItems: 'center',
 		background: 'transparent',
-		borderColor: vars.color.border,
+		borderColor: themeVars.color.border,
 		borderRadius: vars.border.radii.full,
 		borderStyle: 'solid',
 		borderWidth: vars.border.width.thin,
-		color: vars.color.text.default,
+		color: themeVars.color.text.default,
 		display: 'inline-flex',
 		fontSize: vars.font.size.small,
 		gap: vars.space.xsmall,
@@ -39,13 +40,13 @@ export const chipStyle = recipe({
 			filter: {
 				cursor: 'pointer',
 				':hover': {
-					backgroundColor: vars.color.surface.hover
+					backgroundColor: themeVars.color.surface.hover
 				}
 			},
 			link: {
 				cursor: 'pointer',
 				':hover': {
-					backgroundColor: vars.color.surface.hover
+					backgroundColor: themeVars.color.surface.hover
 				}
 			}
 		},
@@ -60,11 +61,11 @@ export const chipStyle = recipe({
 				type: 'filter'
 			},
 			style: {
-				backgroundColor: vars.color.accent.default,
+				backgroundColor: themeVars.color.accent.default,
 				border: 'none',
-				color: vars.color.text.inverse,
+				color: themeVars.color.text.inverse,
 				':hover': {
-					backgroundColor: vars.color.accent.hover
+					backgroundColor: themeVars.color.accent.hover
 				}
 			}
 		}

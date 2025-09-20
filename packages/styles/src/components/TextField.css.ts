@@ -1,6 +1,7 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const containerStyle = recipe({
 	base: {
@@ -18,31 +19,31 @@ export const containerStyle = recipe({
 })
 
 export const labelStyle = style({
-	color: vars.color.text.default,
+	color: themeVars.color.text.default,
 	fontSize: vars.font.size.medium
 })
 
 export const requiredStyle = style({
-	color: vars.color.negative.default
+	color: themeVars.color.negative.default
 })
 
 export const textFieldStyle = recipe({
 	base: {
 		backgroundColor: 'transparent',
-		borderColor: vars.color.border,
+		borderColor: themeVars.color.border,
 		borderRadius: vars.border.radii.full,
 		borderStyle: 'solid',
 		borderWidth: vars.border.width.thin,
-		color: vars.color.text.default,
+		color: themeVars.color.text.default,
 		display: 'flex',
 		gap: vars.space.medium,
 		fontSize: vars.font.size.small,
-		outlineColor: vars.color.accent.default,
+		outlineColor: themeVars.color.accent.default,
 		paddingBlock: vars.space.medium,
 		paddingInline: vars.space.xlarge,
 		':disabled': {
-			borderColor: vars.color.surface.disabled,
-			color: vars.color.text.disabled,
+			borderColor: themeVars.color.surface.disabled,
+			color: themeVars.color.text.disabled,
 			cursor: 'not-allowed',
 			opacity: 0.5
 		}
@@ -50,7 +51,7 @@ export const textFieldStyle = recipe({
 	variants: {
 		error: {
 			true: {
-				borderColor: vars.color.negative.default
+				borderColor: themeVars.color.negative.default
 			}
 		},
 		fullWidth: {
@@ -62,11 +63,11 @@ export const textFieldStyle = recipe({
 })
 
 export const helperTextStyle = style({
-	color: vars.color.text.muted,
+	color: themeVars.color.text.muted,
 	fontSize: vars.font.size.small
 })
 
 export const errorMessageStyle = style({
-	color: vars.color.negative.default,
+	color: themeVars.color.negative.default,
 	fontSize: vars.font.size.small
 })

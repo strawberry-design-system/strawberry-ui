@@ -1,11 +1,12 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const labelStyle = recipe({
 	base: {
 		alignItems: 'center',
-		color: vars.color.text.default,
+		color: themeVars.color.text.default,
 		cursor: 'pointer',
 		display: 'flex',
 		fontSize: vars.font.size.small,
@@ -14,7 +15,7 @@ export const labelStyle = recipe({
 	variants: {
 		disabled: {
 			true: {
-				color: vars.color.text.disabled,
+				color: themeVars.color.text.disabled,
 				cursor: 'not-allowed',
 				opacity: 0.5
 			}
@@ -36,7 +37,7 @@ export const switchStyle = recipe({
 		transition: 'background-color 0.3s ease',
 		':after': {
 			aspectRatio: '1/1',
-			backgroundColor: vars.color.surface.default,
+			backgroundColor: themeVars.color.surface.default,
 			borderRadius: vars.border.radii.full,
 			boxShadow: vars.shadow.small,
 			content: '',
@@ -51,21 +52,21 @@ export const switchStyle = recipe({
 	variants: {
 		checked: {
 			true: {
-				backgroundColor: vars.color.accent.default,
+				backgroundColor: themeVars.color.accent.default,
 				':after': {
 					left: 'unset',
 					right: '5%'
 				}
 			},
 			false: {
-				backgroundColor: vars.color.surface.muted
+				backgroundColor: themeVars.color.surface.muted
 			}
 		},
 		disabled: {
 			true: {
-				borderColor: vars.color.surface.disabled,
+				borderColor: themeVars.color.surface.disabled,
 				':after': {
-					backgroundColor: vars.color.surface.disabled
+					backgroundColor: themeVars.color.surface.disabled
 				}
 			}
 		}
@@ -77,7 +78,7 @@ export const switchStyle = recipe({
 				checked: true
 			},
 			style: {
-				backgroundColor: vars.color.surface.disabled
+				backgroundColor: themeVars.color.surface.disabled
 			}
 		}
 	]

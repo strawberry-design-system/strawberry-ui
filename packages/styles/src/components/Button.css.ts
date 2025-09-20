@@ -1,5 +1,6 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const buttonStyle = recipe({
 	base: {
@@ -99,14 +100,14 @@ export const buttonStyle = recipe({
 				tone: 'accent'
 			},
 			style: {
-				backgroundColor: vars.color.accent.default,
-				color: vars.color.surface.default,
+				backgroundColor: themeVars.color.accent.default,
+				color: themeVars.color.surface.default,
 				':hover': {
-					backgroundColor: vars.color.accent.hover
+					backgroundColor: themeVars.color.accent.hover
 				},
 				':disabled': {
-					backgroundColor: vars.color.surface.disabled,
-					color: vars.color.text.disabled
+					backgroundColor: themeVars.color.surface.disabled,
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -116,14 +117,14 @@ export const buttonStyle = recipe({
 				tone: 'accent'
 			},
 			style: {
-				borderColor: vars.color.accent.default,
-				color: vars.color.accent.default,
+				borderColor: themeVars.color.accent.default,
+				color: themeVars.color.accent.default,
 				':hover': {
-					backgroundColor: vars.color.accent.soft
+					backgroundColor: themeVars.color.accent.soft
 				},
 				':disabled': {
-					borderColor: vars.color.surface.disabled,
-					color: vars.color.text.disabled
+					borderColor: themeVars.color.surface.disabled,
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -133,12 +134,12 @@ export const buttonStyle = recipe({
 				tone: 'accent'
 			},
 			style: {
-				color: vars.color.accent.default,
+				color: themeVars.color.accent.default,
 				':hover': {
-					backgroundColor: vars.color.accent.soft
+					backgroundColor: themeVars.color.accent.soft
 				},
 				':disabled': {
-					color: vars.color.text.disabled
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -148,14 +149,14 @@ export const buttonStyle = recipe({
 				tone: 'neutral'
 			},
 			style: {
-				backgroundColor: vars.color.surface.muted,
-				color: vars.color.text.default,
+				backgroundColor: themeVars.color.surface.muted,
+				color: themeVars.color.text.default,
 				':hover': {
-					backgroundColor: vars.color.surface.hover
+					backgroundColor: themeVars.color.surface.hover
 				},
 				':disabled': {
-					backgroundColor: vars.color.surface.disabled,
-					color: vars.color.text.disabled
+					backgroundColor: themeVars.color.surface.disabled,
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -165,14 +166,14 @@ export const buttonStyle = recipe({
 				tone: 'neutral'
 			},
 			style: {
-				borderColor: vars.color.border,
-				color: vars.color.text.default,
+				borderColor: themeVars.color.border,
+				color: themeVars.color.text.default,
 				':hover': {
-					backgroundColor: vars.color.surface.soft
+					backgroundColor: themeVars.color.surface.soft
 				},
 				':disabled': {
-					borderColor: vars.color.surface.disabled,
-					color: vars.color.text.disabled
+					borderColor: themeVars.color.surface.disabled,
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -182,12 +183,12 @@ export const buttonStyle = recipe({
 				tone: 'neutral'
 			},
 			style: {
-				color: vars.color.text.default,
+				color: themeVars.color.text.default,
 				':hover': {
-					backgroundColor: vars.color.surface.soft
+					backgroundColor: themeVars.color.surface.soft
 				},
 				':disabled': {
-					color: vars.color.text.disabled
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -197,14 +198,14 @@ export const buttonStyle = recipe({
 				tone: 'positive'
 			},
 			style: {
-				backgroundColor: vars.color.positive.default,
-				color: vars.color.surface.default,
+				backgroundColor: themeVars.color.positive.default,
+				color: themeVars.color.surface.default,
 				':hover': {
-					backgroundColor: vars.color.positive.hover
+					backgroundColor: themeVars.color.positive.hover
 				},
 				':disabled': {
-					backgroundColor: vars.color.surface.disabled,
-					color: vars.color.text.disabled
+					backgroundColor: themeVars.color.surface.disabled,
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -215,14 +216,14 @@ export const buttonStyle = recipe({
 			},
 			style: {
 				backgroundColor: 'transparent',
-				borderColor: vars.color.positive.default,
-				color: vars.color.positive.default,
+				borderColor: themeVars.color.positive.default,
+				color: themeVars.color.positive.default,
 				':hover': {
-					backgroundColor: vars.color.positive.soft
+					backgroundColor: themeVars.color.positive.soft
 				},
 				':disabled': {
-					borderColor: vars.color.surface.disabled,
-					color: vars.color.text.disabled
+					borderColor: themeVars.color.surface.disabled,
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -233,12 +234,12 @@ export const buttonStyle = recipe({
 			},
 			style: {
 				backgroundColor: 'transparent',
-				color: vars.color.positive.default,
+				color: themeVars.color.positive.default,
 				':hover': {
-					backgroundColor: vars.color.positive.soft
+					backgroundColor: themeVars.color.positive.soft
 				},
 				':disabled': {
-					color: vars.color.text.disabled
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -248,14 +249,14 @@ export const buttonStyle = recipe({
 				tone: 'warning'
 			},
 			style: {
-				backgroundColor: vars.color.warning.default,
-				color: vars.color.surface.default,
+				backgroundColor: themeVars.color.warning.default,
+				color: themeVars.color.surface.default,
 				':hover': {
-					backgroundColor: vars.color.warning.hover
+					backgroundColor: themeVars.color.warning.hover
 				},
 				':disabled': {
-					backgroundColor: vars.color.surface.disabled,
-					color: vars.color.text.disabled
+					backgroundColor: themeVars.color.surface.disabled,
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -266,14 +267,14 @@ export const buttonStyle = recipe({
 			},
 			style: {
 				backgroundColor: 'transparent',
-				borderColor: vars.color.warning.default,
-				color: vars.color.warning.default,
+				borderColor: themeVars.color.warning.default,
+				color: themeVars.color.warning.default,
 				':hover': {
-					backgroundColor: vars.color.warning.soft
+					backgroundColor: themeVars.color.warning.soft
 				},
 				':disabled': {
-					borderColor: vars.color.surface.disabled,
-					color: vars.color.text.disabled
+					borderColor: themeVars.color.surface.disabled,
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -284,12 +285,12 @@ export const buttonStyle = recipe({
 			},
 			style: {
 				backgroundColor: 'transparent',
-				color: vars.color.warning.default,
+				color: themeVars.color.warning.default,
 				':hover': {
-					backgroundColor: vars.color.warning.soft
+					backgroundColor: themeVars.color.warning.soft
 				},
 				':disabled': {
-					color: vars.color.text.disabled
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -299,14 +300,14 @@ export const buttonStyle = recipe({
 				tone: 'negative'
 			},
 			style: {
-				backgroundColor: vars.color.negative.default,
-				color: vars.color.surface.default,
+				backgroundColor: themeVars.color.negative.default,
+				color: themeVars.color.surface.default,
 				':hover': {
-					backgroundColor: vars.color.negative.hover
+					backgroundColor: themeVars.color.negative.hover
 				},
 				':disabled': {
-					backgroundColor: vars.color.surface.disabled,
-					color: vars.color.text.disabled
+					backgroundColor: themeVars.color.surface.disabled,
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -317,14 +318,14 @@ export const buttonStyle = recipe({
 			},
 			style: {
 				backgroundColor: 'transparent',
-				borderColor: vars.color.negative.default,
-				color: vars.color.negative.default,
+				borderColor: themeVars.color.negative.default,
+				color: themeVars.color.negative.default,
 				':hover': {
-					backgroundColor: vars.color.negative.soft
+					backgroundColor: themeVars.color.negative.soft
 				},
 				':disabled': {
-					borderColor: vars.color.surface.disabled,
-					color: vars.color.text.disabled
+					borderColor: themeVars.color.surface.disabled,
+					color: themeVars.color.text.disabled
 				}
 			}
 		},
@@ -335,12 +336,12 @@ export const buttonStyle = recipe({
 			},
 			style: {
 				backgroundColor: 'transparent',
-				color: vars.color.negative.default,
+				color: themeVars.color.negative.default,
 				':hover': {
-					backgroundColor: vars.color.negative.soft
+					backgroundColor: themeVars.color.negative.soft
 				},
 				':disabled': {
-					color: vars.color.text.disabled
+					color: themeVars.color.text.disabled
 				}
 			}
 		}

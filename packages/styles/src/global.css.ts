@@ -1,5 +1,6 @@
 import { globalStyle } from '@vanilla-extract/css'
 import { vars } from './theme.css'
+import { themeVars } from './contract.css'
 
 globalStyle('*', {
 	margin: 0,
@@ -9,6 +10,6 @@ globalStyle('*', {
 })
 
 globalStyle('body', {
-	backgroundColor: vars.color.surface.default,
-	color: vars.color.text.default
+	backgroundColor: themeVars.color.surface.default,
+	color: themeVars.color.text.default
 })

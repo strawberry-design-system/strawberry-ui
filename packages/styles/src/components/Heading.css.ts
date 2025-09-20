@@ -1,9 +1,10 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const headingStyle = recipe({
 	base: {
-		color: vars.color.text.default,
+		color: themeVars.color.text.default,
 		fontWeight: vars.font.weight.extrabold
 	},
 	variants: {

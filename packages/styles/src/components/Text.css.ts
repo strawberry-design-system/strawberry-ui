@@ -1,9 +1,10 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const textStyle = recipe({
 	base: {
-		color: vars.color.text.muted
+		color: themeVars.color.text.muted
 	},
 	variants: {
 		size: {

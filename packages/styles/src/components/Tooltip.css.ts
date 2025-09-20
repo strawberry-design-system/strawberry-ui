@@ -1,6 +1,7 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const containerStyle = style({
 	display: 'inline-block',
@@ -9,9 +10,9 @@ export const containerStyle = style({
 
 export const tooltipStyle = recipe({
 	base: {
-		backgroundColor: vars.color.text.default,
+		backgroundColor: themeVars.color.text.default,
 		borderRadius: vars.border.radii.xsmall,
-		color: vars.color.surface.default,
+		color: themeVars.color.surface.default,
 		fontSize: vars.font.size.xsmall,
 		padding: vars.space.small,
 		pointerEvents: 'none',

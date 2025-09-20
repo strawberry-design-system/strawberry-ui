@@ -1,6 +1,7 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const selectContainerStyle = recipe({
 	base: {
@@ -22,7 +23,7 @@ export const selectStyle = recipe({
 	base: {
 		alignItems: 'center',
 		backgroundColor: 'transparent',
-		borderColor: vars.color.border,
+		borderColor: themeVars.color.border,
 		borderStyle: 'solid',
 		borderWidth: vars.border.width.thin,
 		borderRadius: vars.border.radii.full,
@@ -31,11 +32,11 @@ export const selectStyle = recipe({
 		width: vars.size.full,
 		':focus-within': {
 			outline: 'auto',
-			outlineColor: vars.color.accent.default
+			outlineColor: themeVars.color.accent.default
 		},
 		':disabled': {
-			borderColor: vars.color.surface.disabled,
-			color: vars.color.text.disabled,
+			borderColor: themeVars.color.surface.disabled,
+			color: themeVars.color.text.disabled,
 			cursor: 'not-allowed',
 			opacity: 0.5
 		}
@@ -68,15 +69,15 @@ export const selectStyle = recipe({
 })
 
 export const selectLabelStyle = style({
-	color: vars.color.text.default
+	color: themeVars.color.text.default
 })
 
 export const selectPlaceholderStyle = style({
-	color: vars.color.text.placeholder
+	color: themeVars.color.text.placeholder
 })
 
 export const selectListStyle = style({
-	backgroundColor: vars.color.surface.default,
+	backgroundColor: themeVars.color.surface.default,
 	borderRadius: vars.border.radii.xlarge,
 	boxShadow: vars.shadow.medium,
 	display: 'flex',
@@ -97,7 +98,7 @@ export const selectOptionStyle = recipe({
 		textAlign: 'start',
 		width: vars.size.full,
 		':hover': {
-			backgroundColor: vars.color.surface.soft
+			backgroundColor: themeVars.color.surface.soft
 		}
 	},
 	variants: {
@@ -120,7 +121,7 @@ export const selectOptionStyle = recipe({
 		},
 		focused: {
 			true: {
-				backgroundColor: vars.color.surface.soft
+				backgroundColor: themeVars.color.surface.soft
 			}
 		}
 	},
@@ -133,15 +134,15 @@ export const selectOptionLabelStyle = recipe({
 	variants: {
 		actived: {
 			true: {
-				color: vars.color.accent.default
+				color: themeVars.color.accent.default
 			},
 			false: {
-				color: vars.color.text.default
+				color: themeVars.color.text.default
 			}
 		}
 	}
 })
 
 export const selectOptionPlaceholderStyle = style({
-	color: vars.color.text.placeholder
+	color: themeVars.color.text.placeholder
 })

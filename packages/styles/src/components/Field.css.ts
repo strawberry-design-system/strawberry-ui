@@ -1,6 +1,7 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const containerStyle = recipe({
 	base: {
@@ -18,20 +19,20 @@ export const containerStyle = recipe({
 })
 
 export const labelStyle = style({
-	color: vars.color.text.default,
+	color: themeVars.color.text.default,
 	fontSize: vars.font.size.medium
 })
 
 export const requiredStyle = style({
-	color: vars.color.negative.default
+	color: themeVars.color.negative.default
 })
 
 export const helperTextStyle = style({
-	color: vars.color.text.muted,
+	color: themeVars.color.text.muted,
 	fontSize: vars.font.size.small
 })
 
 export const errorMessageStyle = style({
-	color: vars.color.negative.default,
+	color: themeVars.color.negative.default,
 	fontSize: vars.font.size.small
 })

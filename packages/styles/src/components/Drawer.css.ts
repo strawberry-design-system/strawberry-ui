@@ -1,9 +1,10 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const drawerContainerStyle = style({
-	backgroundColor: vars.color.surface.backdrop,
+	backgroundColor: themeVars.color.surface.backdrop,
 	display: 'flex',
 	left: 0,
 	height: vars.size.full,
@@ -15,7 +16,7 @@ export const drawerContainerStyle = style({
 
 export const drawerStyle = recipe({
 	base: {
-		backgroundColor: vars.color.surface.default,
+		backgroundColor: themeVars.color.surface.default,
 		height: vars.size.full,
 		position: 'absolute',
 		width: vars.size.full
@@ -63,16 +64,16 @@ export const drawerLinkStyle = recipe({
 	variants: {
 		selected: {
 			true: {
-				borderLeftColor: vars.color.accent.default,
+				borderLeftColor: themeVars.color.accent.default,
 				borderLeftStyle: 'solid',
 				borderLeftWidth: vars.border.width.medium,
-				color: vars.color.text.default,
+				color: themeVars.color.text.default,
 				fontWeight: vars.font.weight.bold
 			},
 			false: {
-				color: vars.color.text.muted,
+				color: themeVars.color.text.muted,
 				':hover': {
-					backgroundColor: vars.color.surface.soft
+					backgroundColor: themeVars.color.surface.soft
 				}
 			}
 		}

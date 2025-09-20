@@ -1,6 +1,7 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const tabStyle = style({
 	display: 'flex'
@@ -17,16 +18,16 @@ export const tabLinkStyle = recipe({
 	variants: {
 		selected: {
 			true: {
-				borderBottomColor: vars.color.accent.default,
+				borderBottomColor: themeVars.color.accent.default,
 				borderBottomStyle: 'solid',
 				borderBottomWidth: vars.border.width.medium,
-				color: vars.color.text.default,
+				color: themeVars.color.text.default,
 				fontWeight: vars.font.weight.bold
 			},
 			false: {
-				color: vars.color.text.muted,
+				color: themeVars.color.text.muted,
 				hover: {
-					backgroundColor: vars.color.surface.soft
+					backgroundColor: themeVars.color.surface.soft
 				}
 			}
 		}

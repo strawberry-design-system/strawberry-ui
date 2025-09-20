@@ -1,5 +1,6 @@
 import { style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const modalContainerStyle = style({
 	height: vars.size.full,
@@ -13,7 +14,7 @@ export const modalContainerStyle = style({
 
 export const backdropStyle = style({
 	alignItems: 'center',
-	backgroundColor: vars.color.surface.backdrop,
+	backgroundColor: themeVars.color.surface.backdrop,
 	display: 'flex',
 	flexDirection: 'column',
 	justifyContent: 'center',
@@ -26,7 +27,7 @@ export const backdropStyle = style({
 })
 
 export const modalStyle = style({
-	backgroundColor: vars.color.surface.default,
+	backgroundColor: themeVars.color.surface.default,
 	borderRadius: vars.border.radii.xlarge,
 	maxWidth: vars.size.xlarge,
 	position: 'relative',

@@ -1,6 +1,7 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { keyframes, style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 const circularIndeterminate = keyframes({
 	'0%': { transform: 'rotate(0deg)' },
@@ -17,7 +18,7 @@ export const circularStyle = recipe({
 		position: 'relative',
 		width: vars.size.medium,
 		':before': {
-			backgroundColor: vars.color.surface.default,
+			backgroundColor: themeVars.color.surface.default,
 			borderRadius: '50%',
 			content: '',
 			height: '85%',
@@ -28,16 +29,16 @@ export const circularStyle = recipe({
 	variants: {
 		variant: {
 			primary: {
-				background: `conic-gradient(${vars.color.accent.default} var(--cirlce-gradient-degree), ${vars.color.surface.muted} 0deg)`
+				background: `conic-gradient(${themeVars.color.accent.default} var(--cirlce-gradient-degree), ${themeVars.color.surface.muted} 0deg)`
 			},
 			success: {
-				background: `conic-gradient(${vars.color.positive.default} var(--cirlce-gradient-degree), ${vars.color.surface.muted} 0deg)`
+				background: `conic-gradient(${themeVars.color.positive.default} var(--cirlce-gradient-degree), ${themeVars.color.surface.muted} 0deg)`
 			},
 			warning: {
-				background: `conic-gradient(${vars.color.warning.default} var(--cirlce-gradient-degree), ${vars.color.surface.muted} 0deg)`
+				background: `conic-gradient(${themeVars.color.warning.default} var(--cirlce-gradient-degree), ${themeVars.color.surface.muted} 0deg)`
 			},
 			error: {
-				background: `conic-gradient(${vars.color.negative.default} var(--cirlce-gradient-degree), ${vars.color.surface.muted} 0deg)`
+				background: `conic-gradient(${themeVars.color.negative.default} var(--cirlce-gradient-degree), ${themeVars.color.surface.muted} 0deg)`
 			}
 		},
 		indeterminate: {
@@ -65,7 +66,7 @@ const linearIndeterminate = keyframes({
 
 export const linearStyle = recipe({
 	base: {
-		backgroundColor: vars.color.surface.muted,
+		backgroundColor: themeVars.color.surface.muted,
 		height: '8px',
 		overflow: 'hidden',
 		width: vars.size.full

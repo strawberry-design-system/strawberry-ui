@@ -1,11 +1,12 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { globalStyle, style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const labelStyle = recipe({
 	base: {
 		alignItems: 'center',
-		color: vars.color.text.default,
+		color: themeVars.color.text.default,
 		cursor: 'pointer',
 		display: 'flex',
 		fontSize: vars.font.size.small,
@@ -14,7 +15,7 @@ export const labelStyle = recipe({
 	variants: {
 		disabled: {
 			true: {
-				color: vars.color.text.disabled,
+				color: themeVars.color.text.disabled,
 				cursor: 'not-allowed',
 				opacity: 0.5
 			}
@@ -25,7 +26,7 @@ export const labelStyle = recipe({
 export const radioButtonStyle = style({
 	appearance: 'none',
 	backgroundColor: 'transparent',
-	borderColor: vars.color.border,
+	borderColor: themeVars.color.border,
 	borderRadius: vars.border.radii.full,
 	borderStyle: 'solid',
 	borderWidth: vars.border.width.thin,
@@ -37,15 +38,15 @@ export const radioButtonStyle = style({
 })
 
 globalStyle(`${radioButtonStyle}:disabled`, {
-	borderColor: vars.color.surface.disabled
+	borderColor: themeVars.color.surface.disabled
 })
 
 globalStyle(`${radioButtonStyle}:checked`, {
-	borderColor: vars.color.accent.default
+	borderColor: themeVars.color.accent.default
 })
 
 globalStyle(`${radioButtonStyle}:checked::after`, {
-	backgroundColor: vars.color.accent.default,
+	backgroundColor: themeVars.color.accent.default,
 	borderRadius: vars.border.radii.full,
 	content: '""',
 	fontSize: vars.font.size.xsmall,
@@ -58,5 +59,5 @@ globalStyle(`${radioButtonStyle}:checked::after`, {
 })
 
 globalStyle(`${radioButtonStyle}:checked:disabled::after`, {
-	backgroundColor: vars.color.surface.disabled
+	backgroundColor: themeVars.color.surface.disabled
 })

@@ -1,6 +1,7 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { style } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const paginationStyle = style({
 	alignItems: 'center',
@@ -22,7 +23,7 @@ export const pageButtonStyle = recipe({
 		padding: vars.space.medium,
 		transition: 'background-color 0.3s',
 		':disabled': {
-			color: vars.color.text.disabled,
+			color: themeVars.color.text.disabled,
 			cursor: 'not-allowed',
 			opacity: 0.5
 		}
@@ -30,17 +31,17 @@ export const pageButtonStyle = recipe({
 	variants: {
 		selected: {
 			true: {
-				backgroundColor: vars.color.accent.default,
-				color: vars.color.surface.default,
+				backgroundColor: themeVars.color.accent.default,
+				color: themeVars.color.surface.default,
 				':disabled': {
-					backgroundColor: vars.color.surface.disabled
+					backgroundColor: themeVars.color.surface.disabled
 				}
 			},
 			false: {
 				backgroundColor: 'transparent',
-				color: vars.color.text.default,
+				color: themeVars.color.text.default,
 				':hover': {
-					backgroundColor: vars.color.surface.soft
+					backgroundColor: themeVars.color.surface.soft
 				}
 			}
 		}
@@ -51,6 +52,6 @@ export const pageButtonStyle = recipe({
 })
 
 export const pageTextStyle = style({
-	color: vars.color.text.default,
+	color: themeVars.color.text.default,
 	fontSize: vars.font.size.small
 })

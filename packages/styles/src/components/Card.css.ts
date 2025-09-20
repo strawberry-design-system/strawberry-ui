@@ -1,10 +1,11 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 export const cardStyle = recipe({
 	base: {
 		backgroundColor: 'transparent',
-		borderColor: vars.color.border,
+		borderColor: themeVars.color.border,
 		borderRadius: vars.border.radii.xlarge,
 		borderStyle: 'solid',
 		borderWidth: vars.border.width.thin

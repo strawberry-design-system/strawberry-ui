@@ -1,6 +1,7 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { keyframes } from '@vanilla-extract/css'
 import { vars } from '../theme.css'
+import { themeVars } from '../contract.css'
 
 const spin = keyframes({
 	'0%': { transform: 'rotate(0deg)' },
@@ -12,10 +13,10 @@ export const spinnerStyle = recipe({
 		borderColor: 'transparent',
 		borderStyle: 'solid',
 		borderWidth: vars.border.width.medium,
-		borderLeftColor: vars.color.accent.default,
+		borderLeftColor: themeVars.color.accent.default,
 		borderRadius: '50%',
-		borderRightColor: vars.color.accent.default,
-		borderTopColor: vars.color.accent.default,
+		borderRightColor: themeVars.color.accent.default,
+		borderTopColor: themeVars.color.accent.default,
 		display: 'flex',
 		animation: `${spin} 1s linear infinite`
 	},

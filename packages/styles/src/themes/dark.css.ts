@@ -1,7 +1,8 @@
 import { createTheme } from '@vanilla-extract/css'
+import { themeVars } from '../contract.css'
 import colors from '@strawberry-ui/tokens/colors.json'
 
-export const darkTheme = createTheme({
+export const darkTheme = createTheme(themeVars, {
 	color: {
 		accent: {
 			default: colors.brand.mid,
@@ -38,8 +39,9 @@ export const darkTheme = createTheme({
 			soft: `${colors.gray[100]}10`
 		},
 		text: {
-			default: colors.gray[50],
+			default: colors.white,
 			disabled: colors.gray[400],
+			inverse: colors.gray[800],
 			muted: colors.gray[300],
 			placeholder: colors.gray[400]
 		}
