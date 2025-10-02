@@ -6,28 +6,28 @@
 		"low": "#b12927"
 	},
 	"positive": {
-		"light": "",
-		"mid": "",
+		"light": "#d4edda",
+		"mid": "#71dd8a",
 		"dark": "#28a745",
-		"low": ""
+		"low": "#1c6c2a"
 	},
 	"negative": {
-		"light": "",
-		"mid": "",
+		"light": "#f8d7da",
+		"mid": "#f28b96",
 		"dark": "#dc3545",
-		"low": ""
+		"low": "#a71d2a"
 	},
 	"warning": {
-		"light": "",
-		"mid": "",
+		"light": "#fff3cd",
+		"mid": "#ffe066",
 		"dark": "#ffc107",
-		"low": ""
+		"low": "#b38600"
 	},
 	"information": {
-		"light": "",
-		"mid": "",
+		"light": "#d1ecf1",
+		"mid": "#6fd1e0",
 		"dark": "#17a2b8",
-		"low": ""
+		"low": "#0e7a8c"
 	},
 	"white": "#ffffff",
 	"black": "#000000",
